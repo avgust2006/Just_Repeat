@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<?xml-model href=""?>
+<Pane fx:id="Main_Pane" prefHeight="400.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.MainBtn_Contr">
+	<children>
+		<Button fx:id="Main_Button" alignment="CENTER"
+			contentDisplay="CENTER" layoutX="249.0" layoutY="352.0"
+			mnemonicParsing="false" onAction="#actionPerformed" prefHeight="34.0"
+			prefWidth="103.0" text="DICTIONARIES" textAlignment="CENTER" />
+		<Button fx:id="Dict_1" layoutX="69.0" layoutY="78.0"
+			mnemonicParsing="false" onAction="#actionDict_1" text="1"
+			visible="false" />
+		<Button fx:id="Dict_2" layoutX="153.0" layoutY="78.0"
+			mnemonicParsing="false" text="2" visible="false" />
+		<Button fx:id="Dict_3" layoutX="249.0" layoutY="78.0"
+			mnemonicParsing="false" text="3" visible="false" />
+		<Button fx:id="Dict_4" layoutX="352.0" layoutY="78.0"
+			mnemonicParsing="false" text="4" visible="false" />
+		<Button fx:id="Dict_5" layoutX="452.0" layoutY="78.0"
+			mnemonicParsing="false" text="5" visible="false" />
+		<Label fx:id="Word" layoutX="71.0" layoutY="160.0"
+			prefHeight="81.0" prefWidth="103.0" text=" " />
+		<Label fx:id="Translation" layoutX="416.0" layoutY="160.0"
+			prefHeight="81.0" prefWidth="103.0" text=" " />
+		<Button fx:id="Repeat" alignment="CENTER" layoutX="61.0"
+			layoutY="352.0" mnemonicParsing="false" onAction="#actionRepeat"
+			prefHeight="30.0" prefWidth="70.0" text="REPEAT" visible="false" />
+		<Button fx:id="Next" alignment="CENTER" layoutX="470.0"
+			layoutY="352.0" mnemonicParsing="false" onAction="#actionNext"
+			prefHeight="30.0" prefWidth="70.0" text="TRANSLATE" visible="false" />
+	</children>
+</Pane>
