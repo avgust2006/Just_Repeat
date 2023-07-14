@@ -1,1 +1,21 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.button
+{
+	-fx-background-color : #CDC2AE;  -fx-text-fill: #116a7b; /*-fx-effect:  dropshadow(three-pass-box,#685050,1.0,21.0,10.0,0.0,0.0,0.0);*/
+	
+}
+ 
+.button:hover
+{
+	-fx-background-color :  #ECE5C7; /*#CDC2AE;*/
+}
+
+.button:focused
+{
+	-fx-background-color :/* #CDC2AE;*/ #ECE5C7;
+} 
+ .button:pressed
+{
+	-fx-background-color : #CDC2AE; /*#ECE5C7;*/
+} 
+    

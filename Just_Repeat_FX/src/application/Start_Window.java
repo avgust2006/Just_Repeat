@@ -22,6 +22,7 @@ public class Start_Window extends Application {
 			// this with Scene Builder
 			Parent root = FXMLLoader.load(getClass().getResource("Main_Scene.fxml"));
 			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			

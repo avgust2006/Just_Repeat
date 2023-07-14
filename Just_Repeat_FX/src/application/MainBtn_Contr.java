@@ -198,7 +198,7 @@ public class MainBtn_Contr {
 		  		  
 			  for (String s: files.last_key.keySet()) {
 				  Word.setText(s); 
-				  files.playAudioFile(files.last_key.get(s));  	  
+				  files.playAudioFile(files.last_key.get(s));  
 			  }
 	  }
 
