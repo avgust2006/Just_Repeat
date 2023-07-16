@@ -78,5 +78,10 @@
   		<artifactId>javafx-media</artifactId>
   		<version>13</version>
   	</dependency>
+  	<dependency>
+  <groupId>de.jensd</groupId>
+  <artifactId>fontawesomefx</artifactId>
+  <version>8.2</version>
+</dependency>
   </dependencies>
 </project>

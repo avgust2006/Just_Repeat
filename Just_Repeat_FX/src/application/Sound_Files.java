@@ -23,7 +23,7 @@ public class Sound_Files {
 		last_key=new HashMap<> ();
 	}
 	
-	public void Dict1_Downloads (String directoryPath) {
+	public void dict_Downloads (String directoryPath) {
 			
 		Map<String, File> WavFiles= loadFilesToMap(directoryPath);
 		Map<String, File> WavFiles_copy= WavFiles;

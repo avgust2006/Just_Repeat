@@ -27,11 +27,15 @@ public class MainBtn_Contr {
 	@FXML  //this abbreviation is necessary for declaration elements in start window
 	private Pane Main_Pane;
 	@FXML
+	private Pane Verbs_Btn_Pane;
+	@FXML
+	private Pane Verbs_Btn_Pane1;
+	@FXML
 	private Button Main_Button;
 	@FXML
-	private Button Dict_1;
+	private Button verbs;
 	@FXML
-	private Button Dict_2;
+	private Button verbs_1;
 	@FXML
 	private Button Dict_3;
 	@FXML
@@ -75,16 +79,17 @@ public class MainBtn_Contr {
 		  }
 		  
 		 if ( Main_Button.getText().equalsIgnoreCase("DICTIONARIES")) {
-		   Main_Button.setVisible(false);  		   
-		   Dict_1.setVisible(true);   
-		   Dict_2.setVisible(true);   
+		   Main_Button.setVisible(false);  
+		   Verbs_Btn_Pane.setVisible(true);
+		   Verbs_Btn_Pane1.setVisible(true);  
 		   Dict_3.setVisible(true); 
 		   Dict_4.setVisible(true);   
 		   Dict_5.setVisible(true);
 		  }
 		 
 		   if (Main_Button.getText().equalsIgnoreCase("START")) {
-	    	 Dict_1.setVisible(false); 
+			 Verbs_Btn_Pane.setVisible(false); 
+			 Verbs_Btn_Pane1.setVisible(false);
 	    	 Main_Button.setText("FINISH"); 
 	    	 Repeat.setVisible(true);
 	    	 Next.setVisible(true);
@@ -110,21 +115,21 @@ public class MainBtn_Contr {
 	  
 	    
 	  /*
-	   * This method handles events of first dictionary button actions(choice dictionary)		
+	   * This method handles of Verbs button pressing event		
 	  */ 
 	  public void actionDict_1(ActionEvent e) {
 		 //  files.Dict1_Downloads("C:\\Users\\Public\\Just_Repeat\\dictionaries\\verbs");
 		  //  files.Dict1_Downloads("dictionaries/verbs");
-		   files.Dict1_Downloads("src/main/resources/dictionaries/verbs");
-		   Dict_1.setOpacity(0);
-		   Dict_2.setVisible(false);
+		   files.dict_Downloads("src/main/resources/dictionaries/verbs");
+		   verbs.setOpacity(0);
+		   Verbs_Btn_Pane1.setVisible(false);
 		   Dict_3.setVisible(false);
 		   Dict_4.setVisible(false);
 		   Dict_5.setVisible(false);
-		   Dict_1.setLayoutY(Main_Pane.getHeight()/2);
-		   Dict_1.setLayoutX(Main_Pane.getWidth()/2-13);
+		   Verbs_Btn_Pane.setLayoutY(194);
+		   Verbs_Btn_Pane.setLayoutX(265);
 		   Main_Button.setText("START");
-		   FadeTransition fadeIn = new FadeTransition(Duration.seconds(1), Dict_1);
+		   FadeTransition fadeIn = new FadeTransition(Duration.seconds(1), verbs);
 		    fadeIn.setFromValue(0);
 		    fadeIn.setToValue(1);
 		    fadeIn.play();	
@@ -136,6 +141,28 @@ public class MainBtn_Contr {
 		    
 		    		   		  
 	}
+	  
+	  public void actionVerbs_1(ActionEvent e) {
+		  files.dict_Downloads("src/main/resources/dictionaries/verbs_1");
+		  verbs_1.setOpacity(0);
+		  Verbs_Btn_Pane.setVisible(false);
+		   Dict_3.setVisible(false);
+		   Dict_4.setVisible(false);
+		   Dict_5.setVisible(false);
+		   Verbs_Btn_Pane1.setLayoutY(194);
+		   Verbs_Btn_Pane1.setLayoutX(265);
+		   Main_Button.setText("START");
+		   FadeTransition fadeIn = new FadeTransition(Duration.seconds(1), verbs_1);
+		    fadeIn.setFromValue(0);
+		    fadeIn.setToValue(1);
+		    fadeIn.play();	
+		    FadeTransition fadeIn1 = new FadeTransition(Duration.seconds(1), Main_Button);
+		    fadeIn1.setFromValue(0);
+		    fadeIn1.setToValue(1);
+		    fadeIn1.play();	
+		    Main_Button.setVisible(true); 
+		  
+	  }
 	  
 	  public void actionNext(ActionEvent e) {
 		  	  
@@ -161,8 +188,8 @@ public class MainBtn_Contr {
 			  Word.setText(" ");
 			  Word.setVisible(false);
 			  Repeat.setVisible(false);
-			  Dict_1.setVisible(true);
-			  Dict_2.setVisible(true);
+			  Verbs_Btn_Pane.setVisible(true);
+			  Verbs_Btn_Pane1.setVisible(true);
 			  Dict_3.setVisible(true);
 			  Dict_4.setVisible(true);
 			  Dict_5.setVisible(true);
