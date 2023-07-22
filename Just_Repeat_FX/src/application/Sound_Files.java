@@ -8,6 +8,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.sound.sampled.*;
+
+import javafx.animation.FadeTransition;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import javafx.util.Duration;
  
 /**
  * @author Admin
@@ -110,5 +115,20 @@ public class Sound_Files {
  			last_key.clear();
  		}
  		last_key.putAll(key);
+ 	}
+ 	public void fadeChange (Button btn,Button btn1, Pane pane) {
+ 	   FadeTransition fadeBtn = new FadeTransition(Duration.seconds(1), btn);
+ 		     fadeBtn.setFromValue(0);
+ 		     fadeBtn.setToValue(1);
+ 		     fadeBtn.play();
+ 	   FadeTransition fadeBtn1 = new FadeTransition(Duration.seconds(1), btn1);
+ 	         fadeBtn1.setFromValue(0);
+ 	         fadeBtn1.setToValue(1);
+ 	         fadeBtn1.play();
+	   FadeTransition fadePane = new FadeTransition(Duration.seconds(1), pane);
+		    fadePane.setFromValue(0);
+		    fadePane.setToValue(1);
+		    fadePane.play();
+ 		
  	}
 }

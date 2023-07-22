@@ -30,9 +30,6 @@
             <Label layoutX="18.0" layoutY="35.0" text="VERBS" textFill="#116a7b" />
          </children>
       </Pane>
-		<Button fx:id="Dict_3" layoutX="249.0" layoutY="78.0" mnemonicParsing="false" text="3" visible="false" />
-		<Button fx:id="Dict_4" layoutX="352.0" layoutY="78.0" mnemonicParsing="false" text="4" visible="false" />
-		<Button fx:id="Dict_5" layoutX="452.0" layoutY="78.0" mnemonicParsing="false" text="5" visible="false" />
 		<Label fx:id="Word" alignment="CENTER" layoutX="44.0" layoutY="160.0" prefHeight="81.0" prefWidth="195.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
          <font>
             <Font name="Courier New" size="24.0" />
@@ -47,7 +44,7 @@
                </color>
             </DropShadow>
          </effect></Label>
-		<Label fx:id="Translation" alignment="CENTER" layoutX="364.0" layoutY="160.0" prefHeight="81.0" prefWidth="195.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
+		<Label fx:id="Translation" alignment="TOP_CENTER" layoutX="364.0" layoutY="160.0" prefHeight="81.0" prefWidth="195.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -84,6 +81,18 @@
             <Label contentDisplay="CENTER" layoutX="12.0" layoutY="35.0" text="VERBS_1" textFill="#116a7b" />
          </children>
       </Pane>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="373.0" layoutY="201.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="31.0" style="-fx-background-color: #ECE5C7;" text=" " textAlignment="JUSTIFY">
+         <graphic>
+            <FontAwesomeIcon fill="#116a7b" glyphName="VOLUME_UP" size="16" />
+         </graphic>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0">
+               <color>
+                  <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
 	</children>
    <effect>
       <DropShadow />
