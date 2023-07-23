@@ -30,7 +30,7 @@
             <Label layoutX="18.0" layoutY="35.0" text="VERBS" textFill="#116a7b" />
          </children>
       </Pane>
-		<Label fx:id="Word" alignment="CENTER" layoutX="44.0" layoutY="160.0" prefHeight="81.0" prefWidth="195.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
+		<Label fx:id="Word" alignment="TOP_CENTER" layoutX="44.0" layoutY="160.0" prefHeight="81.0" prefWidth="195.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
          <font>
             <Font name="Courier New" size="24.0" />
          </font>
@@ -57,13 +57,16 @@
          <font>
             <Font name="Courier New" size="24.0" />
          </font></Label>
-		<Button fx:id="Repeat" alignment="CENTER" layoutX="61.0" layoutY="352.0" mnemonicParsing="false" onAction="#actionRepeat" prefHeight="30.0" prefWidth="70.0" stylesheets="@application.css" text="REPEAT" visible="false">
+		<Button fx:id="Repeat" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="201.0" mnemonicParsing="false" onAction="#actionRepeat" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" visible="false">
          <effect>
             <DropShadow height="10.0" radius="4.5" width="10.0">
                <color>
                   <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
                </color></DropShadow>
-         </effect></Button>
+         </effect>
+         <graphic>
+            <FontAwesomeIcon fill="#116a7b" glyphName="VOLUME_UP" size="16" />
+         </graphic></Button>
 		<Button fx:id="Next" alignment="CENTER" layoutX="464.0" layoutY="352.0" mnemonicParsing="false" onAction="#actionNext" prefHeight="30.0" prefWidth="89.0" stylesheets="@application.css" text="TRANSLATE" visible="false">
          <effect>
             <DropShadow height="10.0" radius="4.5" width="10.0">
@@ -81,7 +84,7 @@
             <Label contentDisplay="CENTER" layoutX="12.0" layoutY="35.0" text="VERBS_1" textFill="#116a7b" />
          </children>
       </Pane>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="373.0" layoutY="201.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="31.0" style="-fx-background-color: #ECE5C7;" text=" " textAlignment="JUSTIFY">
+      <Button fx:id="Repeat_2" alignment="CENTER" contentDisplay="CENTER" layoutX="373.0" layoutY="201.0" mnemonicParsing="false" onAction="#actionRepeat_1" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY" visible="false">
          <graphic>
             <FontAwesomeIcon fill="#116a7b" glyphName="VOLUME_UP" size="16" />
          </graphic>

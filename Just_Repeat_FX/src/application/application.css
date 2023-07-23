@@ -14,8 +14,12 @@
 {
 	-fx-background-color :/* #CDC2AE;*/ #ECE5C7;
 } 
- .button:pressed
+ .button:armed
 {
 	-fx-background-color : #CDC2AE; /*#ECE5C7;*/
 } 
-    
+
+
+  
+   
+  

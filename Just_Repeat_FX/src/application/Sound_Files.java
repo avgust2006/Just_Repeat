@@ -22,10 +22,12 @@ public class Sound_Files {
 	 
 	public HashMap<Map<String,File>, Map<String,File>> finish_table;
 	public Map<String,File> last_key;
+	public Map<String,File> last_value;
 	
 	public Sound_Files() {
 		finish_table = new HashMap<Map<String,File>, Map<String,File>>();
 		last_key=new HashMap<> ();
+		last_value=new HashMap<> ();
 	}
 	
 	public void dict_Downloads (String directoryPath) {
@@ -114,8 +116,13 @@ public class Sound_Files {
  		if (!last_key.isEmpty()) {
  			last_key.clear();
  		}
+ 		if (!last_value.isEmpty()) {
+ 			 last_value.clear();
+ 		}
  		last_key.putAll(key);
+ 		last_value.putAll(finish_table.get(key));
  	}
+ 	
  	public void fadeChange (Button btn,Button btn1, Pane pane) {
  	   FadeTransition fadeBtn = new FadeTransition(Duration.seconds(1), btn);
  		     fadeBtn.setFromValue(0);

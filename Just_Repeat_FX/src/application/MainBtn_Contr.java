@@ -35,7 +35,8 @@ public class MainBtn_Contr {
 	               Repeat,
 	               Next,
 	               verbs,
-	               verbs_1
+	               verbs_1,
+	               Repeat_2
 	               ;	 
 	 
 	@FXML 
@@ -138,6 +139,7 @@ public class MainBtn_Contr {
 			  instance_map.clear();
 			  instance_map.putAll(files.finish_table.get(files.last_key));
 			  for(String s:instance_map.keySet()) {
+				   Repeat_2.setVisible(true);
 				  Translation.setVisible(true);
 				   Translation.setText(s);
 				   files.playAudioFile(instance_map.get(s));
@@ -148,7 +150,7 @@ public class MainBtn_Contr {
 			  }
 			  
 		  } else if (files.finish_table.size()==0){
-			  
+			  Repeat_2.setVisible(false);
 			  Next.setVisible(false); 
 			  Translation.setText(" ");
 			  Translation.setVisible(false);
@@ -167,6 +169,7 @@ public class MainBtn_Contr {
 	    		  
 	    		  for (String s: SF.keySet()) {
 	    			    if (translate==false) {
+	    			      Repeat_2.setVisible(false);
 	    				  Word.setText(s);
 	    				  Translation.setText(" ");
 	    				  files.playAudioFile(SF.get(s));    				 				  
@@ -187,10 +190,16 @@ public class MainBtn_Contr {
 	  public void actionRepeat(ActionEvent e) {
 		  		  
 			  for (String s: files.last_key.keySet()) {
-				  Word.setText(s); 
 				  files.playAudioFile(files.last_key.get(s));  
 			  }
 	  }
+	  
+	  public void actionRepeat_1(ActionEvent e) {
+  		  
+		  for (String s: files.last_value.keySet()) {
+			   files.playAudioFile(files.last_value.get(s));  
+		  }
+  }
 	  private void setAllPaneVisible (boolean set) {
 		  if (set) {
 			  Verbs_Btn_Pane.setVisible(true);
