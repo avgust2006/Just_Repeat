@@ -30,7 +30,7 @@
             <Label layoutX="18.0" layoutY="35.0" text="VERBS" textFill="#116a7b" />
          </children>
       </Pane>
-		<Label fx:id="Word" alignment="TOP_CENTER" layoutX="44.0" layoutY="160.0" prefHeight="81.0" prefWidth="195.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
+		<Label fx:id="Word" alignment="TOP_CENTER" layoutX="29.0" layoutY="160.0" prefHeight="81.0" prefWidth="217.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
          <font>
             <Font name="Courier New" size="24.0" />
          </font>
@@ -44,7 +44,7 @@
                </color>
             </DropShadow>
          </effect></Label>
-		<Label fx:id="Translation" alignment="TOP_CENTER" layoutX="364.0" layoutY="160.0" prefHeight="81.0" prefWidth="195.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
+		<Label fx:id="Translation" alignment="TOP_CENTER" layoutX="356.0" layoutY="160.0" prefHeight="81.0" prefWidth="217.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

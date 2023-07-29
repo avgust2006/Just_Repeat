@@ -48,9 +48,13 @@ public class MainBtn_Contr {
 	private boolean translate;
 	private int counter;
 	private Random randomize;
-	
+	private double X_Initlayout,
+	               Y_Initlayout;
+	private String currentPane;
+	private ArrayList<Pane> panes;
 	
 	Sound_Files files;
+	
 	
 	 
 	
@@ -60,6 +64,11 @@ public class MainBtn_Contr {
 		 files = new Sound_Files ();
 		 instance_map = new HashMap<String,File>();
 		 randomize=new Random();
+		 currentPane="";
+		 X_Initlayout=0;
+		 Y_Initlayout=0;
+		 panes= new ArrayList<Pane>();
+		 
 	}
 	
 	/*
@@ -73,11 +82,13 @@ public class MainBtn_Contr {
 		  
 		 if ( Main_Button.getText().equalsIgnoreCase("DICTIONARIES")) {
 		   Main_Button.setVisible(false);  
-		   setAllPaneVisible(true);		        
+		   fillDictPanes();
+		   files.setAllPaneVisible(true,panes);	
 		  }
 		 
 		   if (Main_Button.getText().equalsIgnoreCase("START")) {
-			   setAllPaneVisible(false);
+			//   setAllPaneVisible(false);
+			 files.setAllPaneVisible(false,panes);
 	    	 Main_Button.setText("FINISH"); 
 	    	 Repeat.setVisible(true);
 	    	 Next.setVisible(true);
@@ -103,14 +114,15 @@ public class MainBtn_Contr {
 	  
 	    
 	  /*
-	   * This method handles of Verbs button pressing event		
+	   * This method handles of VERBS button pressing event		
 	  */ 
 	  public void actionDict_1(ActionEvent e) {
 		 //  files.Dict1_Downloads("C:\\Users\\Public\\Just_Repeat\\dictionaries\\verbs");
 		  //  files.Dict1_Downloads("dictionaries/verbs");
 		   files.dict_Downloads("src/main/resources/dictionaries/verbs");
 		   verbs.setOpacity(0);
-		   setOnePaneVisible(Verbs_Btn_Pane);
+		   files.setOnePaneVisible(Verbs_Btn_Pane,panes);
+		   takePaneInitPosition(Verbs_Btn_Pane); 
 		   Verbs_Btn_Pane.setLayoutY(194);
 		   Verbs_Btn_Pane.setLayoutX(265);
 		   Main_Button.setText("START");
@@ -123,7 +135,8 @@ public class MainBtn_Contr {
 	  public void actionVerbs_1(ActionEvent e) {
 		  files.dict_Downloads("src/main/resources/dictionaries/verbs_1");
 		  verbs_1.setOpacity(0); 
-		  setOnePaneVisible(Verbs_Btn_Pane1);
+		  files.setOnePaneVisible(Verbs_Btn_Pane1,panes);
+		  takePaneInitPosition(Verbs_Btn_Pane1); 
 		   Verbs_Btn_Pane1.setLayoutY(194);
 		   Verbs_Btn_Pane1.setLayoutX(265);
 		   Main_Button.setText("START");
@@ -132,7 +145,7 @@ public class MainBtn_Contr {
 		  
 	  }
 	  
-	  public void actionNext(ActionEvent e) {
+	  public void actionNext(ActionEvent e) {             //handling  NEXT/TRANSLATION button (located in the right bottom angle)
 		  	  
 		  if (Next.getText().equalsIgnoreCase("TRANSLATE")
 				  && files.finish_table.containsKey(files.last_key)) {
@@ -149,15 +162,15 @@ public class MainBtn_Contr {
 				    
 			  }
 			  
-		  } else if (files.finish_table.size()==0){
+		  } else if (files.finish_table.size()==0){           //action, when last word in the dictionary is managed
+			  Repeat.setVisible(false);
 			  Repeat_2.setVisible(false);
 			  Next.setVisible(false); 
-			  Translation.setText(" ");
 			  Translation.setVisible(false);
-			  Word.setText(" ");
-			  Word.setVisible(false);
-			  Repeat.setVisible(false);
-			  setAllPaneVisible(true);
+			  Word.setVisible(false);	
+			  setPaneInitPosition(currentPane);
+			  //setAllPaneVisible(true);
+			  files.setAllPaneVisible(true,panes);
 			  
 		  } else  {
 			 
@@ -200,22 +213,21 @@ public class MainBtn_Contr {
 			   files.playAudioFile(files.last_value.get(s));  
 		  }
   }
+	/* 
 	  private void setAllPaneVisible (boolean set) {
 		  if (set) {
-			  Verbs_Btn_Pane.setVisible(true);
-			  Verbs_Btn_Pane1.setVisible(true); 
-			  
+			  for (Pane p: panes) {
+				  p.setVisible(true);
+			  }			  
 		  }else {
-			  Verbs_Btn_Pane.setVisible(false);
-			  Verbs_Btn_Pane1.setVisible(false); 
-			  
+			  for (Pane p: panes) {
+				  p.setVisible(false);
+			  }			  			  
 		  }
 	  }
 	  
 	  private void setOnePaneVisible (Pane pane ) {
-		  ArrayList<Pane> panes =new ArrayList<Pane>();
-		  panes.add(Verbs_Btn_Pane);
-		  panes.add(Verbs_Btn_Pane1);
+		 
 		  for (Pane p: panes) {
 			  if (!(pane.getId().equalsIgnoreCase(p.getId()))){
 				  p.setVisible(false);
@@ -223,6 +235,34 @@ public class MainBtn_Contr {
 			  
 		  }	  
 	  }
+	  */
+	  
+	  private void takePaneInitPosition(Pane pane) {
+		  if(X_Initlayout==0 && Y_Initlayout==0) {
+		   currentPane=pane.getId();
+		   X_Initlayout=pane.getLayoutX();
+		   Y_Initlayout=pane.getLayoutY();  
+		  }
+	  }
+	  private void setPaneInitPosition (String PaneName ) {
+		 
+		  for (Pane p: panes) {
+			  if ((p.getId().equalsIgnoreCase(PaneName))){
+				  p.setLayoutX(X_Initlayout);
+				  p.setLayoutY(Y_Initlayout);
+				  X_Initlayout=0;
+				  Y_Initlayout=0;
+			  }
+			  
+		  }	  
+	  }
+	  
+	  private void fillDictPanes() {
+		  panes.add(Verbs_Btn_Pane);
+		  panes.add(Verbs_Btn_Pane1);
+	  }
+	  
+	 
 	  
 
 }

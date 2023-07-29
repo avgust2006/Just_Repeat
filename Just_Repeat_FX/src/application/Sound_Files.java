@@ -5,6 +5,7 @@ package application;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import javax.sound.sampled.*;
@@ -135,7 +136,30 @@ public class Sound_Files {
 	   FadeTransition fadePane = new FadeTransition(Duration.seconds(1), pane);
 		    fadePane.setFromValue(0);
 		    fadePane.setToValue(1);
-		    fadePane.play();
- 		
+		    fadePane.play();		
  	}
+ 	
+ 	 public void setAllPaneVisible (boolean set, ArrayList<Pane> panes ) {
+		  if (set) {
+			  for (Pane p: panes) {
+				  p.setVisible(true);
+			  }			  
+		  }else {
+			  for (Pane p: panes) {
+				  p.setVisible(false);
+			  }			  			  
+		  }
+	  }
+ 	 
+ 	 public void setOnePaneVisible (Pane pane, ArrayList<Pane> panes ) {
+		 
+		  for (Pane p: panes) {
+			  if (!(pane.getId().equalsIgnoreCase(p.getId()))){
+				  p.setVisible(false);
+			  }
+			  
+		  }	  
+	  }
+ 	 	
+ 	 
 }
