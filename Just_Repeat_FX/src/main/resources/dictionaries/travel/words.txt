@@ -1,0 +1,10 @@
+flight.wav
+hotel.wav
+travel.wav
+trip.wav
+vacation.wav
+гостиницаhotel.wav
+отпускvacation.wav
+поездкаtrip.wav
+полетflight.wav
+путешествоватьtravel.wav

@@ -3,12 +3,22 @@
  */
 package application;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import javax.print.DocFlavor.URL;
 import javax.sound.sampled.*;
+import javax.swing.JOptionPane;
 
 import javafx.animation.FadeTransition;
 import javafx.scene.control.Button;
@@ -61,7 +71,7 @@ public class Sound_Files {
 	}
 	 
 	/* The function downloads .wav files from necessary directory to an ArrayList */
-	/*
+	 
 	public   List<File> loadFilesToList(String directoryPath) {
         List<File> fileList = new ArrayList<>();
 
@@ -77,7 +87,7 @@ public class Sound_Files {
 
         return fileList;
     }
-    */
+     
 	
 	 public  void playAudioFile(File wav) {
 	        try {
@@ -96,10 +106,9 @@ public class Sound_Files {
 	        
 	        
 	    }
-	
+ 
  	public Map<String, File> loadFilesToMap(String directoryPath) {
         Map<String, File> fileMap = new HashMap<>();
-
         File directory = new File(directoryPath);
         File[] files = directory.listFiles();
         if (files != null) {
@@ -112,7 +121,103 @@ public class Sound_Files {
 
         return fileMap;
     }
- 	
+  	/*
+ 	public Map<String, File> loadFilesToMap(String directoryPath) {
+ 	    Map<String, File> fileMap = new HashMap<>();
+ 	    
+ 	    try {
+ 	        // Get the class loader for the current class
+ 	    	 ClassLoader classLoader = getClass().getClassLoader();
+ 	        
+ 	        // Use the class loader to get the resources from the JAR file
+ 	         File directory = new File(classLoader.getResource(directoryPath).toURI());
+ 	    	  
+ 	        if (directory.exists() && directory.isDirectory()) {
+ 	            File[] files = directory.listFiles();
+ 	            if (files != null) {
+ 	                for (File file : files) {
+ 	                    if (file.isFile() && file.getName().toLowerCase().endsWith(".wav")) {
+ 	                        fileMap.put(file.getName(), file);
+ 	                    }
+ 	                }
+ 	            }
+ 	        }
+ 	    } catch (URISyntaxException e) {
+ 	    // Handle the exception
+ 	        String errorMessage = "An error occurred while accessing the resources: " + e.getMessage();
+ 	        JOptionPane.showMessageDialog(null, errorMessage, "Error", JOptionPane.ERROR_MESSAGE);
+ 	        // You can also log the error to the console or a log file
+ 	        e.printStackTrace();
+ 	    }
+
+ 	    return fileMap;
+ 	}
+
+	  
+	 public Map<String, File> loadFilesToMap(String directoryPath) {
+		    Map<String, File> fileMap = new HashMap<>();
+		    
+		    // Get the class loader for the current class
+		    ClassLoader classLoader = getClass().getClassLoader();
+		    
+		    // Use the class loader to get the resources as a stream
+		    try (InputStream inputStream = classLoader.getResourceAsStream(directoryPath)) {
+		        if (inputStream != null) {
+		            // Create a temporary directory to extract the files from the stream
+		            File tempDir = Files.createTempDirectory("temp").toFile();
+		            
+		            // Copy the files from the stream to the temporary directory
+		            try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+		                String line;
+		                while ((line = reader.readLine()) != null) {
+		                    File file = new File(line);
+		                    if (file.isFile() && file.getName().toLowerCase().endsWith(".wav")) {
+		                        fileMap.put(file.getName(), file);
+		                    }
+		                }
+		            } catch (IOException e) {
+		                // Handle the IOException if necessary
+		            }
+		        }
+		    } catch (IOException e) {
+		        // Handle the IOException if necessary
+		    }
+
+		    return fileMap;
+		}
+  
+	 public Map<String, InputStream> loadFilesToMap(String directoryPath) {
+	        Map<String, InputStream> fileMap = new HashMap<>();
+
+	        // Use the class loader to get the URL of the resource directory
+	        java.net.URL resourceUrl = getClass().getResource(directoryPath);
+
+	        if (resourceUrl != null) {
+	            try {
+	                // Open an InputStream for the resource directory
+	                InputStream directoryStream = resourceUrl.openStream();
+
+	                // Create a BufferedReader to read the filenames from the directory
+	                try (BufferedReader reader = new BufferedReader(new InputStreamReader(directoryStream))) {
+	                    String filename;
+	                    while ((filename = reader.readLine()) != null) {
+	                        // Use getResourceAsStream() to load the individual .wav files
+	                        InputStream inputStream = getClass().getResourceAsStream(directoryPath + filename);
+	                        if (inputStream != null) {
+	                            fileMap.put(filename, inputStream);
+	                        }
+	                    }
+	                }
+	            } catch (IOException e) {
+	                // Handle the IOException if necessary
+	            }
+	        } else {
+	            // Handle the case when the resource URL is null
+	        }
+
+	        return fileMap;
+	    }
+	 */
  	public void saveLastKey(Map<String,File> key) {
  		if (!last_key.isEmpty()) {
  			last_key.clear();

@@ -3,6 +3,8 @@ package application;
  
 
 import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList; 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +30,8 @@ public class MainBtn_Contr {
 	@FXML  //this abbreviation is necessary for declaration elements in start window
 	private Pane Main_Pane,
 	             Verbs_Btn_Pane,
-	             Verbs_Btn_Pane1;
+	             Verbs_Btn_Pane1,
+	             Travel_Btn_Pane;
  
 	@FXML
 	private Button Main_Button,
@@ -36,7 +39,8 @@ public class MainBtn_Contr {
 	               Next,
 	               verbs,
 	               verbs_1,
-	               Repeat_2
+	               Repeat_2,
+	               travel
 	               ;	 
 	 
 	@FXML 
@@ -53,22 +57,24 @@ public class MainBtn_Contr {
 	private String currentPane;
 	private ArrayList<Pane> panes;
 	
-	Sound_Files files;
-	
+ 	Sound_Files files;
+	URLSoundFiles urlstream;
+	IS_Sound_Files inputstream;
 	
 	 
 	
 	public MainBtn_Contr () {
 		 counter=0;
 		 translate=false;
-		 files = new Sound_Files ();
+ 		 files = new Sound_Files ();
 		 instance_map = new HashMap<String,File>();
 		 randomize=new Random();
 		 currentPane="";
 		 X_Initlayout=0;
 		 Y_Initlayout=0;
 		 panes= new ArrayList<Pane>();
-		 
+		 urlstream=new URLSoundFiles();
+		 inputstream=new IS_Sound_Files();
 	}
 	
 	/*
@@ -118,8 +124,9 @@ public class MainBtn_Contr {
 	  */ 
 	  public void actionDict_1(ActionEvent e) {
 		 //  files.Dict1_Downloads("C:\\Users\\Public\\Just_Repeat\\dictionaries\\verbs");
-		  //  files.Dict1_Downloads("dictionaries/verbs");
-		   files.dict_Downloads("src/main/resources/dictionaries/verbs");
+		 //     files.dict_Downloads(getClass().getResource("src/main/resources/dictionaries/verbs").toString());
+	 	      files.dict_Downloads ("src/main/resources/dictionaries/verbs"); 
+		 // imputstream.loadFilesToMap ("main/resources/dictionaries/verbs");
 		   verbs.setOpacity(0);
 		   files.setOnePaneVisible(Verbs_Btn_Pane,panes);
 		   takePaneInitPosition(Verbs_Btn_Pane); 
@@ -142,6 +149,41 @@ public class MainBtn_Contr {
 		   Main_Button.setText("START");
 		   files.fadeChange(Main_Button,verbs_1, Verbs_Btn_Pane1);
 		    Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  public void actionTravel(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/travel/");
+		  travel.setOpacity(0);
+		  inputstream.setOnePaneVisible(Travel_Btn_Pane, panes);
+		  takePaneInitPosition(Travel_Btn_Pane); 
+		  Travel_Btn_Pane.setLayoutY(194);
+		  Travel_Btn_Pane.setLayoutX(265);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, travel, Travel_Btn_Pane) ;
+		 /* 
+		   inputstream.dict_Downloads_Stream("/main/resources/dictionaries/travel/");  
+		   
+		//  urlstream.dict_Downloads_Stream("/main/resources/dictionaries/travel/"); 
+		  Translation.setVisible(true);
+		  Word.setVisible(true);
+		  int i=0;
+		  for (Map<String, byte[]> SF:inputstream.finish_table.keySet()) {
+			  if (i==0) {
+			  for (String s: SF.keySet()) {
+				  Word.setText(s); 
+			 	  inputstream.playbyteAudioFile(SF.get(s)); 
+			 	  break;
+			 	  
+			  }
+			  
+			  } 
+			  i++;
+		  }
+		  inputstream.finish_table.clear();
+	//	  urlstream.loadURLToMap("/main/resources/dictionaries/travel/flight.wav");
+		  */
 		  
 	  }
 	  
@@ -260,6 +302,7 @@ public class MainBtn_Contr {
 	  private void fillDictPanes() {
 		  panes.add(Verbs_Btn_Pane);
 		  panes.add(Verbs_Btn_Pane1);
+		  panes.add(Travel_Btn_Pane);
 	  }
 	  
 	 

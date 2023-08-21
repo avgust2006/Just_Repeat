@@ -24,7 +24,7 @@
          <children>
       		<Button fx:id="verbs" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="-1.0" mnemonicParsing="false" onAction="#actionDict_1" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <graphic>
-                  <FontAwesomeIcon fill="#116a7b" glyphName="TINT" size="20" />
+                  <FontAwesomeIcon fill="#116a7b" glyphName="GLOBE" size="20" />
                </graphic>
             </Button>
             <Label layoutX="18.0" layoutY="35.0" text="VERBS" textFill="#116a7b" />
@@ -65,7 +65,7 @@
                </color></DropShadow>
          </effect>
          <graphic>
-            <FontAwesomeIcon fill="#116a7b" glyphName="VOLUME_UP" size="16" />
+             <FontAwesomeIcon fill="#116a7b" glyphName="VOLUME_UP" size="16" />  
          </graphic></Button>
 		<Button fx:id="Next" alignment="CENTER" layoutX="464.0" layoutY="352.0" mnemonicParsing="false" onAction="#actionNext" prefHeight="30.0" prefWidth="89.0" stylesheets="@application.css" text="TRANSLATE" visible="false">
          <effect>
@@ -78,7 +78,7 @@
          <children>
             <Button fx:id="verbs_1" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="-1.0" mnemonicParsing="false" onAction="#actionVerbs_1" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <graphic>
-                  <FontAwesomeIcon fill="#116a7b" glyphName="TINT" size="20" />
+                  <FontAwesomeIcon fill="#116a7b" glyphName="GLOBE" size="20" />
                </graphic>
             </Button>
             <Label contentDisplay="CENTER" layoutX="12.0" layoutY="35.0" text="VERBS_1" textFill="#116a7b" />
@@ -86,7 +86,7 @@
       </Pane>
       <Button fx:id="Repeat_2" alignment="CENTER" contentDisplay="CENTER" layoutX="373.0" layoutY="201.0" mnemonicParsing="false" onAction="#actionRepeat_1" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY" visible="false">
          <graphic>
-            <FontAwesomeIcon fill="#116a7b" glyphName="VOLUME_UP" size="16" />
+             <FontAwesomeIcon fill="#116a7b" glyphName="VOLUME_UP" size="16" />  
          </graphic>
          <effect>
             <DropShadow height="10.0" radius="4.5" width="10.0">
@@ -96,6 +96,16 @@
             </DropShadow>
          </effect>
       </Button>
+      <Pane fx:id="Travel_Btn_Pane" layoutX="196.0" layoutY="40.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="travel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="-1.0" mnemonicParsing="false" onAction="#actionTravel" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <graphic>
+                  <FontAwesomeIcon fill="#116a7b" glyphName="GLOBE" size="20" />
+               </graphic>
+            </Button>
+            <Label layoutX="15.0" layoutY="35.0" text="TRAVEL" textFill="#116a7b" />
+         </children>
+      </Pane>
 	</children>
    <effect>
       <DropShadow />
