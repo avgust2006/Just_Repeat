@@ -48,7 +48,8 @@ public class MainBtn_Contr {
 	              Translation;
 	 
 	
-	private Map <String,File> instance_map;
+	//private Map <String,File> instance_map;
+	private Map <String,byte[]> instance_map;
 	private boolean translate;
 	private int counter;
 	private Random randomize;
@@ -67,7 +68,8 @@ public class MainBtn_Contr {
 		 counter=0;
 		 translate=false;
  		 files = new Sound_Files ();
-		 instance_map = new HashMap<String,File>();
+		// instance_map = new HashMap<String,File>();
+ 		instance_map = new HashMap<String,byte[]>();
 		 randomize=new Random();
 		 currentPane="";
 		 X_Initlayout=0;
@@ -99,6 +101,23 @@ public class MainBtn_Contr {
 	    	 Repeat.setVisible(true);
 	    	 Next.setVisible(true);
 	    	 counter=0;
+	    	 int rand = randomize.nextInt(inputstream.finish_table.size()) ;
+	    	 for (Map<String, byte[]> SF:inputstream.finish_table.keySet()) {
+	    		 if (rand==counter) {
+	    		  for (String s: SF.keySet()) {
+	    			  if (translate==false) {	
+	    				  Word.setVisible(true);
+	    				  Word.setText(s); 
+	    				  inputstream.playAudioFile(SF.get(s));    				 
+	    				  translate=true;
+	    				  inputstream.saveLastKey(SF);
+	    				  Next.setText("TRANSLATE");
+	    			  }
+	    		  }
+	    	   }
+	    		 counter++; 
+	    	 }	
+	    	/* 
 	    	 int rand = randomize.nextInt(files.finish_table.size()) ;
 	    	 for (Map<String, File> SF:files.finish_table.keySet()) {
 	    		 if (rand==counter) {
@@ -114,7 +133,8 @@ public class MainBtn_Contr {
 	    		  }
 	    	   }
 	    		 counter++; 
-	    	 }	    	 	    	 
+	    	 }	
+	    	 */
 	     } 
 	  }
 	  
@@ -162,6 +182,7 @@ public class MainBtn_Contr {
 		  Travel_Btn_Pane.setLayoutX(265);
 		  Main_Button.setText("START");
 		  inputstream.fadeChange(Main_Button, travel, Travel_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
 		 /* 
 		   inputstream.dict_Downloads_Stream("/main/resources/dictionaries/travel/");  
 		   
@@ -187,7 +208,63 @@ public class MainBtn_Contr {
 		  
 	  }
 	  
-	  public void actionNext(ActionEvent e) {             //handling  NEXT/TRANSLATION button (located in the right bottom angle)
+	  public void actionNext(ActionEvent e) {  
+		  
+		  //handling  NEXT/TRANSLATION button (located in the right bottom angle)
+	  	  
+		  if (Next.getText().equalsIgnoreCase("TRANSLATE")
+				  && inputstream.finish_table.containsKey(inputstream.last_key)) {
+			  instance_map.clear();
+			  instance_map.putAll(inputstream.finish_table.get(inputstream.last_key));
+			  for(String s:instance_map.keySet()) {
+				   Repeat_2.setVisible(true);
+				  Translation.setVisible(true);
+				   Translation.setText(s);
+				   inputstream.playAudioFile(instance_map.get(s));
+				   Next.setText("NEXT");
+				   inputstream.finish_table.remove(inputstream.last_key);
+				   translate=false;
+				    
+			  }
+			  
+		  } else if (inputstream.finish_table.size()==0){           //action, when last word in the dictionary is managed
+			  Repeat.setVisible(false);
+			  Repeat_2.setVisible(false);
+			  Next.setVisible(false); 
+			  Translation.setVisible(false);
+			  Word.setVisible(false);	
+			  setPaneInitPosition(currentPane);
+			  //setAllPaneVisible(true);
+			  inputstream.setAllPaneVisible(true,panes);
+			  
+		  } else  {
+			 
+		   counter=0;	
+		   int rand_1 = randomize.nextInt(inputstream.finish_table.size()) ;
+           for (Map<String, byte[]> SF:inputstream.finish_table.keySet()) {
+        	   
+        	   if (rand_1==counter) { 
+	    		  
+	    		  for (String s: SF.keySet()) {
+	    			    if (translate==false) {
+	    			      Repeat_2.setVisible(false);
+	    				  Word.setText(s);
+	    				  Translation.setText(" ");
+	    				  inputstream.playAudioFile(SF.get(s));    				 				  
+	    				  inputstream.saveLastKey(SF);
+	    				  Next.setText("TRANSLATE");
+	    				  translate=true;
+	    			    }
+	    			  
+	    		  }
+                }
+        	   counter++;
+	    	 }
+		  
+		  }
+		  
+		 /* 
+		  //handling  NEXT/TRANSLATION button (located in the right bottom angle)
 		  	  
 		  if (Next.getText().equalsIgnoreCase("TRANSLATE")
 				  && files.finish_table.containsKey(files.last_key)) {
@@ -239,21 +316,32 @@ public class MainBtn_Contr {
 	    	 }
 		  
 		  }
-		 
+		 */
 	  }
 	  
 	  public void actionRepeat(ActionEvent e) {
-		  		  
+		  
+		  for (String s: inputstream.last_key.keySet()) {
+			  inputstream.playAudioFile(inputstream.last_key.get(s)); 
+		  }
+		  /*		  
 			  for (String s: files.last_key.keySet()) {
 				  files.playAudioFile(files.last_key.get(s));  
 			  }
+			*/  
 	  }
 	  
 	  public void actionRepeat_1(ActionEvent e) {
+		  
+		  for (String s: inputstream.last_value.keySet()) {
+			  inputstream.playAudioFile(inputstream.last_value.get(s));  
+		  }
   		  
+		  /*
 		  for (String s: files.last_value.keySet()) {
 			   files.playAudioFile(files.last_value.get(s));  
 		  }
+		  */
   }
 	/* 
 	  private void setAllPaneVisible (boolean set) {

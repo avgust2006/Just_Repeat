@@ -44,7 +44,8 @@ public class IS_Sound_Files {
 	 // this function download "finish table" map with bytes of inputstream of sounds files
 	
 public void dict_Downloads_Stream (String directoryPath) {
-		
+	
+	    finish_table.clear();
 		Map<String, byte[]> WavFiles= loadImputStreamByBytesToMap(directoryPath);
 		Map<String, byte[]> WavFiles_copy= WavFiles;
 		 
@@ -61,11 +62,12 @@ public void dict_Downloads_Stream (String directoryPath) {
 		    } else {
 			  name_1=s.substring(0, s.indexOf(".wav"));
 		    }
-		    
+		     
 		      Finish_map.put(name_1, WavFiles.get(s));
 		 	 Finish_map_1.put(name_2, WavFiles_copy.get(s1));
 		 	 finish_table.putIfAbsent(Finish_map, Finish_map_1);
 		 	 finish_table.putIfAbsent(Finish_map_1, Finish_map );	
+		     
 		 /*  
 		   //if (finish_table.get(Finish_map).hashCode()==Finish_map_1.hashCode()) {}   
 		    if(finish_table.isEmpty()) {
@@ -102,7 +104,7 @@ public void dict_Downloads_Stream (String directoryPath) {
 				    	String URLline;
 				    	
 				    	while ((URLline = reader.readLine()) != null) {
-				    		System.out.println(URLline);
+
 				    		is=this.getClass().getResourceAsStream(directoryPath+URLline);
 				    		 // Convert InputStream to byte array
 					        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -125,7 +127,7 @@ public void dict_Downloads_Stream (String directoryPath) {
 	    }
 	 
 	 
-	 public void playbyteAudioFile(byte[] audioData) {
+	 public void playAudioFile(byte[] audioData) {
 		    try {
 		       
 
@@ -168,6 +170,18 @@ public void dict_Downloads_Stream (String directoryPath) {
 				  }
 				  
 			  }	  
+		  }
+		 
+		 public void setAllPaneVisible (boolean set, ArrayList<Pane> panes ) {
+			  if (set) {
+				  for (Pane p: panes) {
+					  p.setVisible(true);
+				  }			  
+			  }else {
+				  for (Pane p: panes) {
+					  p.setVisible(false);
+				  }			  			  
+			  }
 		  }
 		 
 		 public void fadeChange (Button btn,Button btn1, Pane pane) {
