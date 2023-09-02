@@ -10,7 +10,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
  
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,25 +22,60 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-import javafx.animation.FadeTransition;
-import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-import javafx.util.Duration;
+/*
+ * The  "IS_Sound_Files"  class allows users downloads sounds files from special directory to Map
+ * (finish_table) in format <String,byte[]>, Map<String,byte[]>
+ * 
+ * @author Valerii Demidov
+ * 
+ * */
 
-public class IS_Sound_Files {
+public class IS_Sound_Files extends ManageMainWindowEffect {
 	
-	//public HashMap<Map<String,InputStream>, Map<String,InputStream>> finish_table;
+ /*
+  * Declaration of global VARs.
+  * "finish_table" - map that will contain audio files table in format: key -- name of audio file without .wav extension
+  *                                                                          massive bytes [] of the audio  .wav file
+  *                                                                   value -- name of audio file without .wav extension
+  *                                                                            massive bytes [] of the audio  .wav file   
+  *                                                                            
+  *  "last_key" -  map that will contain sound files table in format:key --  name of audio file without .wav extension
+  *                                                                  value --massive bytes [] of the audio  .wav file    
+  *  This map subsequently will use to remember "key" parameter in  "finish_table" to display and audio .wav file
+  *  after repeating of pressure of a button
+  *  
+  *   "last_value" -  map that will contain sound files table in format:key --  name of audio file without .wav extension
+  *                                                                  value --massive bytes [] of the audio  .wav file    
+  *  This map subsequently will use to remember "value" parameter in  "finish_table" to display and audio .wav file
+  *  after repeating of pressure of a button                                                                                                                                   
+  * */
+	
 	public HashMap<Map<String,byte[]>, Map<String,byte[]>> finish_table;
 	public Map<String,byte[]> last_key;
 	public Map<String,byte[]> last_value;
+	
+	/* The constructor of "IS_Sound_Files class" , definition of above VARs*/
 	
 	public IS_Sound_Files() {
 		finish_table = new HashMap<Map<String,byte[]>, Map<String,byte[]>>();
 		last_key=new HashMap<> ();
 		last_value=new HashMap<> ();
 	}
-
-	 // this function download "finish table" map with bytes of inputstream of sounds files
+     /*
+      * This methods directly downloads "finish table" global VARs
+      * 
+      * Parameters:
+      *           "directoryPath" - is string that points where need to take . wav files
+      * 
+      *           Example: 
+      *           "C:\Users\Admin\git\repository\Just_Repeat_FX\src\main\resources\dictionaries\travel" this 
+      *           is the path where my resource is located. In this case "directoryPath" VAR should look like this:
+      *          "/main/resources/dictionaries/travel/"
+      *  Return: 
+      *         void       
+      * 
+      * */
+	 
 	
 public void dict_Downloads_Stream (String directoryPath) {
 	
@@ -51,7 +85,8 @@ public void dict_Downloads_Stream (String directoryPath) {
 		 
 		 for (String s: WavFiles.keySet()) {
 			  
-			  for(String s1:WavFiles_copy.keySet()) {
+			  
+			for(String s1:WavFiles_copy.keySet()) {
 				  if (s1.contains(s) && (s1.indexOf(s)!=0)) {
 		    HashMap <String,byte[]> Finish_map=new  HashMap <String,byte[]>();
 		    HashMap <String,byte[]> Finish_map_1=new  HashMap <String,byte[]>(); 
@@ -63,50 +98,51 @@ public void dict_Downloads_Stream (String directoryPath) {
 			  name_1=s.substring(0, s.indexOf(".wav"));
 		    }
 		     
-		      Finish_map.put(name_1, WavFiles.get(s));
+		     Finish_map.put(name_1, WavFiles.get(s));
 		 	 Finish_map_1.put(name_2, WavFiles_copy.get(s1));
 		 	 finish_table.putIfAbsent(Finish_map, Finish_map_1);
 		 	 finish_table.putIfAbsent(Finish_map_1, Finish_map );	
-		     
-		 /*  
-		   //if (finish_table.get(Finish_map).hashCode()==Finish_map_1.hashCode()) {}   
-		    if(finish_table.isEmpty()) {
-		    	 Finish_map.put(name_1, WavFiles.get(s));
-				 Finish_map_1.put(name_2, WavFiles_copy.get(s1));
-				 finish_table.putIfAbsent(Finish_map, Finish_map_1);
-				 finish_table.putIfAbsent(Finish_map_1, Finish_map );	
-		    }else {
-		    	
-		    	   for (Map<String, byte[]> SF:finish_table.keySet()) {
-		            	 if (   (!SF.keySet().contains(name_2)&&!SF.keySet().contains(name_1))) {
-		            		 Finish_map.put(name_1, WavFiles.get(s));
-							 Finish_map_1.put(name_2, WavFiles_copy.get(s1));
-							 finish_table.putIfAbsent(Finish_map, Finish_map_1);
-							 finish_table.putIfAbsent(Finish_map_1, Finish_map );	
-							 break;
-		            	 } 	 		              				   
-			           }		    	
-		            }
-		     */
+		
 				  }  	
 			  }
 		 }
 	}
 
-/////////////                                       ///////
+ /*  This method creates local Map with  <String, byte[]> parameters from path pointed in "directoryPath" string
+   
+    
+      *  Parameters:
+      *           "directoryPath" - is string that points where need to take . wav files
+      * 
+      *           Example: 
+      *           "C:\Users\Admin\git\repository\Just_Repeat_FX\src\main\resources\dictionaries\travel" this 
+      *           is the path where my resource is located. In this case "directoryPath" VAR should look like this:
+      *          "/main/resources/dictionaries/travel/"
+      *  Return: 
+      *          Map<String, byte[]> 
+  * */
+
+
+ 
 	 public Map<String, byte[]> loadImputStreamByBytesToMap(String directoryPath) {
 	        Map<String, byte[]> InputStreamMap = new HashMap<>();		         
-	    
+	    //create  InputStream. "words.txt" is file, that is located in "directoryPath"
+	        // and consist from names of .wav files written line by line
 	         InputStream is = this.getClass().getResourceAsStream(directoryPath+"words.txt");
-	         
+	    //create BufferedReader. Important: in constructor of  InputStreamReader we need use second parameter-
+	         // Charset.forName("CP1251"), for correct displaying Russian chars
 	         try (BufferedReader reader = new BufferedReader(new InputStreamReader(is,Charset.forName("CP1251") ))) {
 				   
 				    	String URLline;
 				    	
 				    	while ((URLline = reader.readLine()) != null) {
+				    		
+				    		if (URLline.equalsIgnoreCase("stopread")) {
+				    			break;
+				    		}
 
 				    		is=this.getClass().getResourceAsStream(directoryPath+URLline);
-				    		 // Convert InputStream to byte array
+				    		  
 					        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 					        byte[] buffer = new byte[4096];
 					        int bytesRead;
@@ -126,6 +162,16 @@ public void dict_Downloads_Stream (String directoryPath) {
 	        return InputStreamMap;
 	    }
 	 
+	 
+	 /*  This method sounds audio file. File is represented in massive bytes
+	   
+	    
+      *  Parameters:
+      *           "audioData" - massive of bytes  a . wav file
+      *  
+      *  Return: 
+      *          void
+  * */
 	 
 	 public void playAudioFile(byte[] audioData) {
 		    try {
@@ -148,7 +194,15 @@ public void dict_Downloads_Stream (String directoryPath) {
 		    }
 		}
  
-	 	 
+	 /*  This method defines (downloads) global VARs "last_key" and "last_value"
+	   
+	    
+      *  Parameters:
+      *           "key" - Map<String,byte[]>
+      *  
+      *  Return: 
+      *          void
+  * */	 
 	 
 	  
 		public void saveLastKey(Map<String,byte[]> key) {
@@ -161,42 +215,8 @@ public void dict_Downloads_Stream (String directoryPath) {
 	 		last_key.putAll(key);
 	 		last_value.putAll(finish_table.get(key));
 	 	}
-		
-		 public void setOnePaneVisible (Pane pane, ArrayList<Pane> panes ) {
-			 
-			  for (Pane p: panes) {
-				  if (!(pane.getId().equalsIgnoreCase(p.getId()))){
-					  p.setVisible(false);
-				  }
-				  
-			  }	  
-		  }
-		 
-		 public void setAllPaneVisible (boolean set, ArrayList<Pane> panes ) {
-			  if (set) {
-				  for (Pane p: panes) {
-					  p.setVisible(true);
-				  }			  
-			  }else {
-				  for (Pane p: panes) {
-					  p.setVisible(false);
-				  }			  			  
-			  }
-		  }
-		 
-		 public void fadeChange (Button btn,Button btn1, Pane pane) {
-		 	   FadeTransition fadeBtn = new FadeTransition(Duration.seconds(1), btn);
-		 		     fadeBtn.setFromValue(0);
-		 		     fadeBtn.setToValue(1);
-		 		     fadeBtn.play();
-		 	   FadeTransition fadeBtn1 = new FadeTransition(Duration.seconds(1), btn1);
-		 	         fadeBtn1.setFromValue(0);
-		 	         fadeBtn1.setToValue(1);
-		 	         fadeBtn1.play();
-			   FadeTransition fadePane = new FadeTransition(Duration.seconds(1), pane);
-				    fadePane.setFromValue(0);
-				    fadePane.setToValue(1);
-				    fadePane.play();		
-		 	}
- 
-}
+	 
+}         
+
+
+	 

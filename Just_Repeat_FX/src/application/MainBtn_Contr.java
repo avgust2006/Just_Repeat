@@ -143,24 +143,51 @@ public class MainBtn_Contr {
 	   * This method handles of VERBS button pressing event		
 	  */ 
 	  public void actionDict_1(ActionEvent e) {
+		  
 		 //  files.Dict1_Downloads("C:\\Users\\Public\\Just_Repeat\\dictionaries\\verbs");
 		 //     files.dict_Downloads(getClass().getResource("src/main/resources/dictionaries/verbs").toString());
-	 	      files.dict_Downloads ("src/main/resources/dictionaries/verbs"); 
+		  inputstream.dict_Downloads_Stream ("/main/resources/dictionaries/verbs/"); 
 		 // imputstream.loadFilesToMap ("main/resources/dictionaries/verbs");
 		   verbs.setOpacity(0);
-		   files.setOnePaneVisible(Verbs_Btn_Pane,panes);
+		   inputstream.setOnePaneVisible(Verbs_Btn_Pane,panes);
 		   takePaneInitPosition(Verbs_Btn_Pane); 
 		   Verbs_Btn_Pane.setLayoutY(194);
 		   Verbs_Btn_Pane.setLayoutX(265);
 		   Main_Button.setText("START");
-		   files.fadeChange(Main_Button,verbs, Verbs_Btn_Pane);
+		   inputstream.fadeChange(Main_Button,verbs, Verbs_Btn_Pane);
 		    Main_Button.setVisible(true); 
 		    
+		/*    
+		//  files.Dict1_Downloads("C:\\Users\\Public\\Just_Repeat\\dictionaries\\verbs");
+			 //     files.dict_Downloads(getClass().getResource("src/main/resources/dictionaries/verbs").toString());
+		 	      files.dict_Downloads_Stream ("src/main/resources/dictionaries/verbs"); 
+			 // imputstream.loadFilesToMap ("main/resources/dictionaries/verbs");
+			   verbs.setOpacity(0);
+			   files.setOnePaneVisible(Verbs_Btn_Pane,panes);
+			   takePaneInitPosition(Verbs_Btn_Pane); 
+			   Verbs_Btn_Pane.setLayoutY(194);
+			   Verbs_Btn_Pane.setLayoutX(265);
+			   Main_Button.setText("START");
+			   files.fadeChange(Main_Button,verbs, Verbs_Btn_Pane);
+			    Main_Button.setVisible(true); 
+		    */
 		    		   		  
 	}
 	  
 	  public void actionVerbs_1(ActionEvent e) {
-		  files.dict_Downloads("src/main/resources/dictionaries/verbs_1");
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/verbs_1/");
+		  verbs_1.setOpacity(0); 
+		  inputstream.setOnePaneVisible(Verbs_Btn_Pane1,panes);
+		  takePaneInitPosition(Verbs_Btn_Pane1); 
+		   Verbs_Btn_Pane1.setLayoutY(194);
+		   Verbs_Btn_Pane1.setLayoutX(265);
+		   Main_Button.setText("START");
+		   inputstream.fadeChange(Main_Button,verbs_1, Verbs_Btn_Pane1);
+		    Main_Button.setVisible(true); 
+		    
+		    /*
+		     * files.dict_Downloads("src/main/resources/dictionaries/verbs_1");
 		  verbs_1.setOpacity(0); 
 		  files.setOnePaneVisible(Verbs_Btn_Pane1,panes);
 		  takePaneInitPosition(Verbs_Btn_Pane1); 
@@ -168,7 +195,8 @@ public class MainBtn_Contr {
 		   Verbs_Btn_Pane1.setLayoutX(265);
 		   Main_Button.setText("START");
 		   files.fadeChange(Main_Button,verbs_1, Verbs_Btn_Pane1);
-		    Main_Button.setVisible(true); 
+		    Main_Button.setVisible(true);  
+		     * */
 		  
 	  }
 	  
@@ -343,29 +371,7 @@ public class MainBtn_Contr {
 		  }
 		  */
   }
-	/* 
-	  private void setAllPaneVisible (boolean set) {
-		  if (set) {
-			  for (Pane p: panes) {
-				  p.setVisible(true);
-			  }			  
-		  }else {
-			  for (Pane p: panes) {
-				  p.setVisible(false);
-			  }			  			  
-		  }
-	  }
-	  
-	  private void setOnePaneVisible (Pane pane ) {
-		 
-		  for (Pane p: panes) {
-			  if (!(pane.getId().equalsIgnoreCase(p.getId()))){
-				  p.setVisible(false);
-			  }
-			  
-		  }	  
-	  }
-	  */
+	 
 	  
 	  private void takePaneInitPosition(Pane pane) {
 		  if(X_Initlayout==0 && Y_Initlayout==0) {

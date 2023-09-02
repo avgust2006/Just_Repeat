@@ -3,33 +3,25 @@
  */
 package application;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.print.DocFlavor.URL;
 import javax.sound.sampled.*;
-import javax.swing.JOptionPane;
-
-import javafx.animation.FadeTransition;
-import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-import javafx.util.Duration;
  
 /**
- * @author Admin
+ * The methods of the "Sound_Files" class is the same like "IS_Sound_Files" class. It works fine for filling 
+ * "finish_table" if I start the program from
+ * Eclipse IDE, but stop working if I start it from a .JAR file. Reason is in way of access to resource file
+ * on computer and in .JAR file
+ * 
+ * @author Valerii Demidov
  *
  */
-public class Sound_Files {
+public class Sound_Files extends ManageMainWindowEffect{
 	 
 	public HashMap<Map<String,File>, Map<String,File>> finish_table;
 	public Map<String,File> last_key;
@@ -41,7 +33,7 @@ public class Sound_Files {
 		last_value=new HashMap<> ();
 	}
 	
-	public void dict_Downloads (String directoryPath) {
+	public void dict_Downloads_Stream (String directoryPath) {
 			
 		Map<String, File> WavFiles= loadFilesToMap(directoryPath);
 		Map<String, File> WavFiles_copy= WavFiles;
@@ -121,103 +113,7 @@ public class Sound_Files {
 
         return fileMap;
     }
-  	/*
- 	public Map<String, File> loadFilesToMap(String directoryPath) {
- 	    Map<String, File> fileMap = new HashMap<>();
- 	    
- 	    try {
- 	        // Get the class loader for the current class
- 	    	 ClassLoader classLoader = getClass().getClassLoader();
- 	        
- 	        // Use the class loader to get the resources from the JAR file
- 	         File directory = new File(classLoader.getResource(directoryPath).toURI());
- 	    	  
- 	        if (directory.exists() && directory.isDirectory()) {
- 	            File[] files = directory.listFiles();
- 	            if (files != null) {
- 	                for (File file : files) {
- 	                    if (file.isFile() && file.getName().toLowerCase().endsWith(".wav")) {
- 	                        fileMap.put(file.getName(), file);
- 	                    }
- 	                }
- 	            }
- 	        }
- 	    } catch (URISyntaxException e) {
- 	    // Handle the exception
- 	        String errorMessage = "An error occurred while accessing the resources: " + e.getMessage();
- 	        JOptionPane.showMessageDialog(null, errorMessage, "Error", JOptionPane.ERROR_MESSAGE);
- 	        // You can also log the error to the console or a log file
- 	        e.printStackTrace();
- 	    }
-
- 	    return fileMap;
- 	}
-
-	  
-	 public Map<String, File> loadFilesToMap(String directoryPath) {
-		    Map<String, File> fileMap = new HashMap<>();
-		    
-		    // Get the class loader for the current class
-		    ClassLoader classLoader = getClass().getClassLoader();
-		    
-		    // Use the class loader to get the resources as a stream
-		    try (InputStream inputStream = classLoader.getResourceAsStream(directoryPath)) {
-		        if (inputStream != null) {
-		            // Create a temporary directory to extract the files from the stream
-		            File tempDir = Files.createTempDirectory("temp").toFile();
-		            
-		            // Copy the files from the stream to the temporary directory
-		            try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
-		                String line;
-		                while ((line = reader.readLine()) != null) {
-		                    File file = new File(line);
-		                    if (file.isFile() && file.getName().toLowerCase().endsWith(".wav")) {
-		                        fileMap.put(file.getName(), file);
-		                    }
-		                }
-		            } catch (IOException e) {
-		                // Handle the IOException if necessary
-		            }
-		        }
-		    } catch (IOException e) {
-		        // Handle the IOException if necessary
-		    }
-
-		    return fileMap;
-		}
-  
-	 public Map<String, InputStream> loadFilesToMap(String directoryPath) {
-	        Map<String, InputStream> fileMap = new HashMap<>();
-
-	        // Use the class loader to get the URL of the resource directory
-	        java.net.URL resourceUrl = getClass().getResource(directoryPath);
-
-	        if (resourceUrl != null) {
-	            try {
-	                // Open an InputStream for the resource directory
-	                InputStream directoryStream = resourceUrl.openStream();
-
-	                // Create a BufferedReader to read the filenames from the directory
-	                try (BufferedReader reader = new BufferedReader(new InputStreamReader(directoryStream))) {
-	                    String filename;
-	                    while ((filename = reader.readLine()) != null) {
-	                        // Use getResourceAsStream() to load the individual .wav files
-	                        InputStream inputStream = getClass().getResourceAsStream(directoryPath + filename);
-	                        if (inputStream != null) {
-	                            fileMap.put(filename, inputStream);
-	                        }
-	                    }
-	                }
-	            } catch (IOException e) {
-	                // Handle the IOException if necessary
-	            }
-	        } else {
-	            // Handle the case when the resource URL is null
-	        }
-
-	        return fileMap;
-	    }
-	 */
+  	 
  	public void saveLastKey(Map<String,File> key) {
  		if (!last_key.isEmpty()) {
  			last_key.clear();
@@ -229,42 +125,11 @@ public class Sound_Files {
  		last_value.putAll(finish_table.get(key));
  	}
  	
- 	public void fadeChange (Button btn,Button btn1, Pane pane) {
- 	   FadeTransition fadeBtn = new FadeTransition(Duration.seconds(1), btn);
- 		     fadeBtn.setFromValue(0);
- 		     fadeBtn.setToValue(1);
- 		     fadeBtn.play();
- 	   FadeTransition fadeBtn1 = new FadeTransition(Duration.seconds(1), btn1);
- 	         fadeBtn1.setFromValue(0);
- 	         fadeBtn1.setToValue(1);
- 	         fadeBtn1.play();
-	   FadeTransition fadePane = new FadeTransition(Duration.seconds(1), pane);
-		    fadePane.setFromValue(0);
-		    fadePane.setToValue(1);
-		    fadePane.play();		
- 	}
- 	
- 	 public void setAllPaneVisible (boolean set, ArrayList<Pane> panes ) {
-		  if (set) {
-			  for (Pane p: panes) {
-				  p.setVisible(true);
-			  }			  
-		  }else {
-			  for (Pane p: panes) {
-				  p.setVisible(false);
-			  }			  			  
-		  }
-	  }
  	 
- 	 public void setOnePaneVisible (Pane pane, ArrayList<Pane> panes ) {
-		 
-		  for (Pane p: panes) {
-			  if (!(pane.getId().equalsIgnoreCase(p.getId()))){
-				  p.setVisible(false);
-			  }
-			  
-		  }	  
-	  }
+ 	
+ 	 
+ 	 
+ 	 
  	 	
  	 
 }
