@@ -62,23 +62,7 @@ public class Sound_Files extends ManageMainWindowEffect{
 	
 	}
 	 
-	/* The function downloads .wav files from necessary directory to an ArrayList */
 	 
-	public   List<File> loadFilesToList(String directoryPath) {
-        List<File> fileList = new ArrayList<>();
-
-        File directory = new File(directoryPath);
-        File[] files = directory.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                if (file.isFile() && file.getName().toLowerCase().endsWith(".wav")) {
-                    fileList.add(file);
-                }
-            }
-        }
-
-        return fileList;
-    }
      
 	
 	 public  void playAudioFile(File wav) {

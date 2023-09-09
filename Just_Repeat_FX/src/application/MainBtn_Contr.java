@@ -2,9 +2,6 @@ package application;
 
  
 
-import java.io.File;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList; 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,27 +25,28 @@ import javafx.scene.layout.Pane;
 
 public class MainBtn_Contr {
 	@FXML  //this abbreviation is necessary for declaration elements in start window
-	private Pane Main_Pane,
-	             Verbs_Btn_Pane,
-	             Verbs_Btn_Pane1,
-	             Travel_Btn_Pane;
+	
+	private Pane Main_Pane,   //main window of program
+	             Verbs_Btn_Pane,  // pane for activate "VERBS" button dictionary
+	             Verbs_Btn_Pane1,  // pane for activate "VERBS1" button dictionary
+	             Travel_Btn_Pane;  // pane for activate "TRAVEL" button dictionary
  
 	@FXML
-	private Button Main_Button,
-	               Repeat,
-	               Next,
-	               verbs,
-	               verbs_1,
-	               Repeat_2,
-	               travel
+	private Button Main_Button,  // "FINISH", "DICTIONARIES", "START" buttons
+	               Repeat,     //the button to repeat sound   in left panel
+	               Next,      // "TRANSLATE","NEXT"
+	               verbs,     // "VERBS"
+	               verbs_1,   //  "VERBS1"
+	               Repeat_2,  //the button to repeat sound   in right panel
+	               travel     // "TRAVEL"
 	               ;	 
 	 
 	@FXML 
-	private Label Word,
-	              Translation;
+	private Label Word,        // left panel
+	              Translation;  //right panel 
 	 
 	
-	//private Map <String,File> instance_map;
+	 
 	private Map <String,byte[]> instance_map;
 	private boolean translate;
 	private int counter;
@@ -56,31 +54,26 @@ public class MainBtn_Contr {
 	private double X_Initlayout,
 	               Y_Initlayout;
 	private String currentPane;
-	private ArrayList<Pane> panes;
-	
- 	Sound_Files files;
-	URLSoundFiles urlstream;
+	private ArrayList<Pane> panes; 
 	IS_Sound_Files inputstream;
 	
 	 
 	
 	public MainBtn_Contr () {
 		 counter=0;
-		 translate=false;
- 		 files = new Sound_Files ();
-		// instance_map = new HashMap<String,File>();
+		 translate=false;	 
  		instance_map = new HashMap<String,byte[]>();
 		 randomize=new Random();
 		 currentPane="";
 		 X_Initlayout=0;
 		 Y_Initlayout=0;
-		 panes= new ArrayList<Pane>();
-		 urlstream=new URLSoundFiles();
+		 panes= new ArrayList<Pane>();	 
 		 inputstream=new IS_Sound_Files();
 	}
 	
 	/*
-	 * This method handles events of main button actions(start learning, next..)
+	 * This method handles events of main button actions("FINISH", "DICTIONARIES", "START")
+	 * ActionEvent "e" - event on pressing button
 	 */
 	
 	  public void actionPerformed(ActionEvent e) {
@@ -91,17 +84,16 @@ public class MainBtn_Contr {
 		 if ( Main_Button.getText().equalsIgnoreCase("DICTIONARIES")) {
 		   Main_Button.setVisible(false);  
 		   fillDictPanes();
-		   files.setAllPaneVisible(true,panes);	
+		   inputstream.setAllPaneVisible(true,panes);	
 		  }
 		 
 		   if (Main_Button.getText().equalsIgnoreCase("START")) {
-			//   setAllPaneVisible(false);
-			 files.setAllPaneVisible(false,panes);
+			 inputstream.setAllPaneVisible(false,panes);
 	    	 Main_Button.setText("FINISH"); 
 	    	 Repeat.setVisible(true);
 	    	 Next.setVisible(true);
 	    	 counter=0;
-	    	 int rand = randomize.nextInt(inputstream.finish_table.size()) ;
+	    	 int rand = randomize.nextInt(inputstream.finish_table.size()) ; 
 	    	 for (Map<String, byte[]> SF:inputstream.finish_table.keySet()) {
 	    		 if (rand==counter) {
 	    		  for (String s: SF.keySet()) {
@@ -117,24 +109,6 @@ public class MainBtn_Contr {
 	    	   }
 	    		 counter++; 
 	    	 }	
-	    	/* 
-	    	 int rand = randomize.nextInt(files.finish_table.size()) ;
-	    	 for (Map<String, File> SF:files.finish_table.keySet()) {
-	    		 if (rand==counter) {
-	    		  for (String s: SF.keySet()) {
-	    			  if (translate==false) {	
-	    				  Word.setVisible(true);
-	    				  Word.setText(s); 
-	    				  files.playAudioFile(SF.get(s));    				 
-	    				  translate=true;
-	    				  files.saveLastKey(SF);
-	    				  Next.setText("TRANSLATE");
-	    			  }
-	    		  }
-	    	   }
-	    		 counter++; 
-	    	 }	
-	    	 */
 	     } 
 	  }
 	  
@@ -147,7 +121,6 @@ public class MainBtn_Contr {
 		 //  files.Dict1_Downloads("C:\\Users\\Public\\Just_Repeat\\dictionaries\\verbs");
 		 //     files.dict_Downloads(getClass().getResource("src/main/resources/dictionaries/verbs").toString());
 		  inputstream.dict_Downloads_Stream ("/main/resources/dictionaries/verbs/"); 
-		 // imputstream.loadFilesToMap ("main/resources/dictionaries/verbs");
 		   verbs.setOpacity(0);
 		   inputstream.setOnePaneVisible(Verbs_Btn_Pane,panes);
 		   takePaneInitPosition(Verbs_Btn_Pane); 
@@ -156,23 +129,12 @@ public class MainBtn_Contr {
 		   Main_Button.setText("START");
 		   inputstream.fadeChange(Main_Button,verbs, Verbs_Btn_Pane);
 		    Main_Button.setVisible(true); 
-		    
-		/*    
-		//  files.Dict1_Downloads("C:\\Users\\Public\\Just_Repeat\\dictionaries\\verbs");
-			 //     files.dict_Downloads(getClass().getResource("src/main/resources/dictionaries/verbs").toString());
-		 	      files.dict_Downloads_Stream ("src/main/resources/dictionaries/verbs"); 
-			 // imputstream.loadFilesToMap ("main/resources/dictionaries/verbs");
-			   verbs.setOpacity(0);
-			   files.setOnePaneVisible(Verbs_Btn_Pane,panes);
-			   takePaneInitPosition(Verbs_Btn_Pane); 
-			   Verbs_Btn_Pane.setLayoutY(194);
-			   Verbs_Btn_Pane.setLayoutX(265);
-			   Main_Button.setText("START");
-			   files.fadeChange(Main_Button,verbs, Verbs_Btn_Pane);
-			    Main_Button.setVisible(true); 
-		    */
 		    		   		  
 	}
+	  
+	  /*
+	   * This method handles of VERBS_1 button pressing event		
+	  */ 
 	  
 	  public void actionVerbs_1(ActionEvent e) {
 		  
@@ -185,18 +147,6 @@ public class MainBtn_Contr {
 		   Main_Button.setText("START");
 		   inputstream.fadeChange(Main_Button,verbs_1, Verbs_Btn_Pane1);
 		    Main_Button.setVisible(true); 
-		    
-		    /*
-		     * files.dict_Downloads("src/main/resources/dictionaries/verbs_1");
-		  verbs_1.setOpacity(0); 
-		  files.setOnePaneVisible(Verbs_Btn_Pane1,panes);
-		  takePaneInitPosition(Verbs_Btn_Pane1); 
-		   Verbs_Btn_Pane1.setLayoutY(194);
-		   Verbs_Btn_Pane1.setLayoutX(265);
-		   Main_Button.setText("START");
-		   files.fadeChange(Main_Button,verbs_1, Verbs_Btn_Pane1);
-		    Main_Button.setVisible(true);  
-		     * */
 		  
 	  }
 	  
@@ -211,34 +161,16 @@ public class MainBtn_Contr {
 		  Main_Button.setText("START");
 		  inputstream.fadeChange(Main_Button, travel, Travel_Btn_Pane) ;
 		  Main_Button.setVisible(true); 
-		 /* 
-		   inputstream.dict_Downloads_Stream("/main/resources/dictionaries/travel/");  
-		   
-		//  urlstream.dict_Downloads_Stream("/main/resources/dictionaries/travel/"); 
-		  Translation.setVisible(true);
-		  Word.setVisible(true);
-		  int i=0;
-		  for (Map<String, byte[]> SF:inputstream.finish_table.keySet()) {
-			  if (i==0) {
-			  for (String s: SF.keySet()) {
-				  Word.setText(s); 
-			 	  inputstream.playbyteAudioFile(SF.get(s)); 
-			 	  break;
-			 	  
-			  }
-			  
-			  } 
-			  i++;
-		  }
-		  inputstream.finish_table.clear();
-	//	  urlstream.loadURLToMap("/main/resources/dictionaries/travel/flight.wav");
-		  */
 		  
 	  }
 	  
+	  /*
+	   * handling  NEXT/TRANSLATION button (located in the right bottom angle)		
+	  */
+	  
 	  public void actionNext(ActionEvent e) {  
 		  
-		  //handling  NEXT/TRANSLATION button (located in the right bottom angle)
+		  
 	  	  
 		  if (Next.getText().equalsIgnoreCase("TRANSLATE")
 				  && inputstream.finish_table.containsKey(inputstream.last_key)) {
@@ -262,7 +194,6 @@ public class MainBtn_Contr {
 			  Translation.setVisible(false);
 			  Word.setVisible(false);	
 			  setPaneInitPosition(currentPane);
-			  //setAllPaneVisible(true);
 			  inputstream.setAllPaneVisible(true,panes);
 			  
 		  } else  {
@@ -291,73 +222,24 @@ public class MainBtn_Contr {
 		  
 		  }
 		  
-		 /* 
-		  //handling  NEXT/TRANSLATION button (located in the right bottom angle)
-		  	  
-		  if (Next.getText().equalsIgnoreCase("TRANSLATE")
-				  && files.finish_table.containsKey(files.last_key)) {
-			  instance_map.clear();
-			  instance_map.putAll(files.finish_table.get(files.last_key));
-			  for(String s:instance_map.keySet()) {
-				   Repeat_2.setVisible(true);
-				  Translation.setVisible(true);
-				   Translation.setText(s);
-				   files.playAudioFile(instance_map.get(s));
-				   Next.setText("NEXT");
-				   files.finish_table.remove(files.last_key);
-				   translate=false;
-				    
-			  }
-			  
-		  } else if (files.finish_table.size()==0){           //action, when last word in the dictionary is managed
-			  Repeat.setVisible(false);
-			  Repeat_2.setVisible(false);
-			  Next.setVisible(false); 
-			  Translation.setVisible(false);
-			  Word.setVisible(false);	
-			  setPaneInitPosition(currentPane);
-			  //setAllPaneVisible(true);
-			  files.setAllPaneVisible(true,panes);
-			  
-		  } else  {
-			 
-		   counter=0;	
-		   int rand_1 = randomize.nextInt(files.finish_table.size()) ;
-           for (Map<String, File> SF:files.finish_table.keySet()) {
-        	   
-        	   if (rand_1==counter) { 
-	    		  
-	    		  for (String s: SF.keySet()) {
-	    			    if (translate==false) {
-	    			      Repeat_2.setVisible(false);
-	    				  Word.setText(s);
-	    				  Translation.setText(" ");
-	    				  files.playAudioFile(SF.get(s));    				 				  
-	    				  files.saveLastKey(SF);
-	    				  Next.setText("TRANSLATE");
-	    				  translate=true;
-	    			    }
-	    			  
-	    		  }
-                }
-        	   counter++;
-	    	 }
-		  
-		  }
-		 */
+		 
 	  }
+	  
+	  /*
+	   * handling  Repeat icon button (located in the right bottom angle)		
+	  */
 	  
 	  public void actionRepeat(ActionEvent e) {
 		  
 		  for (String s: inputstream.last_key.keySet()) {
 			  inputstream.playAudioFile(inputstream.last_key.get(s)); 
 		  }
-		  /*		  
-			  for (String s: files.last_key.keySet()) {
-				  files.playAudioFile(files.last_key.get(s));  
-			  }
-			*/  
+		 
 	  }
+	  
+	  /*
+	   * handling  Repeat icon button (located in the left bottom angle)		
+	  */
 	  
 	  public void actionRepeat_1(ActionEvent e) {
 		  
@@ -365,13 +247,12 @@ public class MainBtn_Contr {
 			  inputstream.playAudioFile(inputstream.last_value.get(s));  
 		  }
   		  
-		  /*
-		  for (String s: files.last_value.keySet()) {
-			   files.playAudioFile(files.last_value.get(s));  
-		  }
-		  */
+		  
   }
 	 
+	  /*
+	   *  This method will be called when need to remember all panels initial position coordinates (buttons VERBs, VERBs_1, TRAVEL and so on)		
+	  */ 
 	  
 	  private void takePaneInitPosition(Pane pane) {
 		  if(X_Initlayout==0 && Y_Initlayout==0) {
@@ -380,6 +261,10 @@ public class MainBtn_Contr {
 		   Y_Initlayout=pane.getLayoutY();  
 		  }
 	  }
+	  
+	  /*
+	   *  This method will be called when need to return all panels (buttons VERBs, VERBs_1, TRAVEL and so on) in initial position		
+	  */
 	  private void setPaneInitPosition (String PaneName ) {
 		 
 		  for (Pane p: panes) {
@@ -392,6 +277,10 @@ public class MainBtn_Contr {
 			  
 		  }	  
 	  }
+	
+	  /*
+	   *  This method  fills Arraylist panes, that will be used next in the program		
+	  */
 	  
 	  private void fillDictPanes() {
 		  panes.add(Verbs_Btn_Pane);

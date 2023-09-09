@@ -70,37 +70,7 @@ public class URLSoundFiles extends ManageMainWindowEffect{
 		
 		}
 		 
-		/* The function downloads .wav files from necessary directory to an ArrayList */
 		 
-		public   List<InputStream> loadFilesToList(String directoryPath) {
-	        List<InputStream> fileList = new ArrayList<>();
-	        
-	        try {
-                // Open an InputStream for the resource directory
-                InputStream directoryStream = getClass().getResourceAsStream(directoryPath);
-
-                // Create a BufferedReader to read the filenames from the directory
-                try (BufferedReader reader = new BufferedReader(new InputStreamReader(directoryStream))) {
-                    String filename;
-                    while ((filename = reader.readLine()) != null) {
-                        // Use getResourceAsStream() to load the individual .wav files
-                        InputStream inputStream = getClass().getResourceAsStream(directoryPath + filename);
-                        if (inputStream != null) {
-                        	fileList.add(inputStream);
-                        }
-                    }
-                }
-            } catch (IOException e) {
-                // Handle the IOException if necessary
-            }
-  
-
-	        return fileList;
-	    }
-	     
-	      
-
- 
  
     public void playSoundFromURL(URL url) {
     	AudioInputStream audioInputStream;
