@@ -29,16 +29,19 @@ public class MainBtn_Contr {
 	private Pane Main_Pane,   //main window of program
 	             Verbs_Btn_Pane,  // pane for activate "VERBS" button dictionary
 	             Verbs_Btn_Pane1,  // pane for activate "VERBS1" button dictionary
-	             Travel_Btn_Pane;  // pane for activate "TRAVEL" button dictionary
+	             Travel_Btn_Pane,  // pane for activate "TRAVEL" button dictionary
+	             House_Btn_Pane;  //  pane for activate "TRAVEL" button dictionary
  
 	@FXML
 	private Button Main_Button,  // "FINISH", "DICTIONARIES", "START" buttons
 	               Repeat,     //the button to repeat sound   in left panel
 	               Next,      // "TRANSLATE","NEXT"
+	               Return,    // "DICTIONARIES" but that return beginning window of the program
 	               verbs,     // "VERBS"
 	               verbs_1,   //  "VERBS1"
 	               Repeat_2,  //the button to repeat sound   in right panel
-	               travel     // "TRAVEL"
+	               travel,     // "TRAVEL"
+	               house      // "HOUSE"
 	               ;	 
 	 
 	@FXML 
@@ -53,12 +56,10 @@ public class MainBtn_Contr {
 	private Random randomize;
 	private double X_Initlayout,
 	               Y_Initlayout;
+	IS_Sound_Files inputstream;
+
 	private String currentPane;
 	private ArrayList<Pane> panes; 
-	IS_Sound_Files inputstream;
-	
-	 
-	
 	public MainBtn_Contr () {
 		 counter=0;
 		 translate=false;	 
@@ -92,6 +93,7 @@ public class MainBtn_Contr {
 	    	 Main_Button.setText("FINISH"); 
 	    	 Repeat.setVisible(true);
 	    	 Next.setVisible(true);
+	    	 Return.setVisible(true);
 	    	 counter=0;
 	    	 int rand = randomize.nextInt(inputstream.finish_table.size()) ; 
 	    	 for (Map<String, byte[]> SF:inputstream.finish_table.keySet()) {
@@ -124,8 +126,7 @@ public class MainBtn_Contr {
 		   verbs.setOpacity(0);
 		   inputstream.setOnePaneVisible(Verbs_Btn_Pane,panes);
 		   takePaneInitPosition(Verbs_Btn_Pane); 
-		   Verbs_Btn_Pane.setLayoutY(194);
-		   Verbs_Btn_Pane.setLayoutX(265);
+		   setPaneInCentral(Verbs_Btn_Pane);
 		   Main_Button.setText("START");
 		   inputstream.fadeChange(Main_Button,verbs, Verbs_Btn_Pane);
 		    Main_Button.setVisible(true); 
@@ -142,13 +143,16 @@ public class MainBtn_Contr {
 		  verbs_1.setOpacity(0); 
 		  inputstream.setOnePaneVisible(Verbs_Btn_Pane1,panes);
 		  takePaneInitPosition(Verbs_Btn_Pane1); 
-		   Verbs_Btn_Pane1.setLayoutY(194);
-		   Verbs_Btn_Pane1.setLayoutX(265);
+		  setPaneInCentral(Verbs_Btn_Pane1);
 		   Main_Button.setText("START");
 		   inputstream.fadeChange(Main_Button,verbs_1, Verbs_Btn_Pane1);
 		    Main_Button.setVisible(true); 
 		  
 	  }
+	  
+	  /*
+	   * This method handles of TRAVEL button pressing event		
+	  */ 
 	  
 	  public void actionTravel(ActionEvent e) {
 		  
@@ -156,10 +160,26 @@ public class MainBtn_Contr {
 		  travel.setOpacity(0);
 		  inputstream.setOnePaneVisible(Travel_Btn_Pane, panes);
 		  takePaneInitPosition(Travel_Btn_Pane); 
-		  Travel_Btn_Pane.setLayoutY(194);
-		  Travel_Btn_Pane.setLayoutX(265);
+		  setPaneInCentral(Travel_Btn_Pane);
 		  Main_Button.setText("START");
 		  inputstream.fadeChange(Main_Button, travel, Travel_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
+	   * This method handles of HOUSE button pressing event		
+	  */ 
+	  
+	  public void actionHouse(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/house/");
+		  house.setOpacity(0);
+		  inputstream.setOnePaneVisible(House_Btn_Pane, panes);
+		  takePaneInitPosition(House_Btn_Pane); 
+		  setPaneInCentral(House_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, house, House_Btn_Pane) ;
 		  Main_Button.setVisible(true); 
 		  
 	  }
@@ -192,7 +212,9 @@ public class MainBtn_Contr {
 			  Repeat_2.setVisible(false);
 			  Next.setVisible(false); 
 			  Translation.setVisible(false);
-			  Word.setVisible(false);	
+			  Word.setVisible(false);
+			  Return.setVisible(false);
+			  Main_Button.setVisible(false);
 			  setPaneInitPosition(currentPane);
 			  inputstream.setAllPaneVisible(true,panes);
 			  
@@ -223,6 +245,28 @@ public class MainBtn_Contr {
 		  }
 		  
 		 
+	  }
+	  
+	  
+	  /*
+	   * handling   DICTIONARIES /Return button (located in the right bottom angle)		
+	  */
+	  
+	  public void actionReturn(ActionEvent e) {
+		  
+		  setPaneInitPosition(currentPane);
+		  inputstream.setAllPaneVisible(true,panes);
+	 	  Main_Button.setVisible(false); 
+	    	 Repeat.setVisible(false);
+	    	 Repeat_2.setVisible(false);
+	    	 Next.setVisible(false);
+	    	 Return.setVisible(false);
+	    	  Translation.setVisible(false);
+			  Word.setVisible(false);
+			  counter=0;
+				 translate=false;	
+		    
+		  
 	  }
 	  
 	  /*
@@ -286,9 +330,25 @@ public class MainBtn_Contr {
 		  panes.add(Verbs_Btn_Pane);
 		  panes.add(Verbs_Btn_Pane1);
 		  panes.add(Travel_Btn_Pane);
+		  panes.add(House_Btn_Pane);
 	  }
 	  
-	 
+	  /*
+	   *  This method  set pane in central position of main pane
+	   *  	
+	  */
 	  
-
+	  private void setPaneInCentral(Pane pane) {
+		  
+		  for (Pane p: panes) {
+			  if ((p.getId().equalsIgnoreCase(pane.getId()))){
+				  p.setLayoutX(Main_Pane.getPrefWidth()/2-p.getPrefWidth()/2);
+				  p.setLayoutY(Main_Pane.getPrefHeight()/2-p.getPrefHeight()/2);
+				  
+			  }
+		  
+		  
+	  }
+	  
+	  }
 }

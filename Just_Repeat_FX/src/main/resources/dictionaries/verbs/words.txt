@@ -24,8 +24,8 @@ go.wav
 идтиgo.wav
 eat.wav
 кушатьeat.wav
-lie.wav
-лежатьlie.wav
+cheat.wav
+обманыватьcheat.wav
 fly.wav
 летатьfly.wav
 find.wav

@@ -16,20 +16,20 @@ kitchen.wav
 кухняkitchen.wav
 mirror.wav
 зеркалоmirror.wav
-put-on.wav
-надетьput-on.wav
-take-off.wav
-снятьtake-off.wav
+put on.wav
+надетьput on.wav
+take off.wav
+снятьtake off.wav
 wardrobe.wav
 шкафwardrobe.wav
 ceiling.wav
 потолокceiling.wav
-come-in.wav
-входитьcome-in.wav
+come in.wav
+входитьcome in.wav
 floor.wav
 полfloor.wav
-room.wav
-комнатаroom.wav
+1room.wav
+комната1room.wav
 wall.wav
 стенаwall.wav
 chair.wav
@@ -38,8 +38,8 @@ light.wav
 светlight.wav
 table.wav
 столtable.wav
-turn-on.wav
-включитьturn-on.wav
+turn on.wav
+включитьturn on.wav
 fork.wav
 вилкаfork.wav
 fridge.wav
@@ -60,3 +60,23 @@ stove.wav
 плитаstove.wav
 window.wav
 окноwindow.wav
+bed.wav
+кроватьbed.wav
+bedroom.wav
+спальняbedroom.wav
+blanket.wav
+одеялоblanket.wav
+pillow.wav
+подушкаpillow.wav
+lie.wav
+лежатьlie.wav
+armchair.wav
+креслоarmchair.wav
+bathroom.wav
+ванная комнатаbathroom.wav
+couch.wav
+диванcouch.wav
+toilet.wav
+туалетtoilet.wav
+towel.wav
+полотенцеtowel.wav

@@ -10,29 +10,38 @@
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 <?xml-model href=""?>
 
-<Pane fx:id="Main_Pane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: C2DEDC;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainBtn_Contr">
+<Pane fx:id="Main_Pane" prefHeight="450.0" prefWidth="684.0" style="-fx-background-color: C2DEDC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainBtn_Contr">
 	<children>
-		<Button fx:id="Main_Button" alignment="CENTER" contentDisplay="CENTER" layoutX="249.0" layoutY="352.0" mnemonicParsing="false" onAction="#actionPerformed" prefHeight="34.0" prefWidth="103.0" stylesheets="@application.css" text="DICTIONARIES" textAlignment="CENTER">
+		<Button fx:id="Main_Button" alignment="CENTER" contentDisplay="CENTER" layoutX="291.0" layoutY="382.0" mnemonicParsing="false" onAction="#actionPerformed" prefHeight="40.0" prefWidth="108.0" stylesheets="@application.css" text="DICTIONARIES" textAlignment="CENTER">
          <effect>
             <DropShadow height="10.0" radius="4.5" width="10.0">
                <color>
                   <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
                </color>
             </DropShadow>
-         </effect></Button>
+         </effect>
+      </Button>
       <Pane fx:id="Verbs_Btn_Pane" layoutX="44.0" layoutY="40.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
-      		<Button fx:id="verbs" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="-1.0" mnemonicParsing="false" onAction="#actionDict_1" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+      		<Button fx:id="verbs" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionDict_1" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
                   <Font size="14.0" />
                </font>
                <graphic>
                   <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
-               </graphic></Button>
-            <Label layoutX="18.0" layoutY="35.0" text="VERBS" textFill="#116a7b" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="18.0" layoutY="48.0" text="VERBS" textFill="#116a7b" />
          </children>
       </Pane>
-		<Label fx:id="Word" alignment="TOP_CENTER" layoutX="29.0" layoutY="160.0" prefHeight="81.0" prefWidth="217.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
+		<Label fx:id="Word" alignment="TOP_CENTER" layoutX="14.0" layoutY="160.0" prefHeight="90.0" prefWidth="309.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
          <font>
             <Font name="Courier New" size="24.0" />
          </font>
@@ -45,8 +54,21 @@
                   <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
                </color>
             </DropShadow>
-         </effect></Label>
-		<Label fx:id="Translation" alignment="TOP_CENTER" layoutX="356.0" layoutY="160.0" prefHeight="81.0" prefWidth="217.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
+         </effect>
+      </Label>
+		<Button fx:id="Repeat" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="210.0" mnemonicParsing="false" onAction="#actionRepeat" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" textFill="#116a7b" visible="false">
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0">
+               <color>
+                  <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+               </color>
+            </DropShadow>
+         </effect>
+         <graphic>
+            <FontIcon iconColor="#116a7b" iconLiteral="fa-volume-up" iconSize="18" />
+         </graphic>
+      </Button>
+		<Label fx:id="Translation" alignment="TOP_CENTER" layoutX="361.0" layoutY="160.0" prefHeight="90.0" prefWidth="309.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -54,41 +76,43 @@
             <DropShadow height="10.0" radius="4.5" width="10.0">
                <color>
                   <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
-               </color></DropShadow>
+               </color>
+            </DropShadow>
          </effect>
          <font>
             <Font name="Courier New" size="24.0" />
-         </font></Label>
-		<Button fx:id="Repeat" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="201.0" mnemonicParsing="false" onAction="#actionRepeat" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" textFill="#116a7b" visible="false">
+         </font>
+      </Label>
+		<Button fx:id="Next" alignment="CENTER" layoutX="491.0" layoutY="382.0" mnemonicParsing="false" onAction="#actionNext" prefHeight="40.0" prefWidth="95.0" stylesheets="@application.css" text="TRANSLATE" visible="false">
          <effect>
             <DropShadow height="10.0" radius="4.5" width="10.0">
                <color>
                   <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
-               </color></DropShadow>
+               </color>
+            </DropShadow>
          </effect>
-         <graphic>
-            <FontIcon iconColor="#116a7b" iconLiteral="fa-volume-up" iconSize="18" />
-         </graphic></Button>
-		<Button fx:id="Next" alignment="CENTER" layoutX="464.0" layoutY="352.0" mnemonicParsing="false" onAction="#actionNext" prefHeight="30.0" prefWidth="89.0" stylesheets="@application.css" text="TRANSLATE" visible="false">
-         <effect>
-            <DropShadow height="10.0" radius="4.5" width="10.0">
-               <color>
-                  <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
-               </color></DropShadow>
-         </effect></Button>
+      </Button>
       <Pane fx:id="Verbs_Btn_Pane1" layoutX="121.0" layoutY="40.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
-            <Button fx:id="verbs_1" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="-1.0" mnemonicParsing="false" onAction="#actionVerbs_1" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+            <Button fx:id="verbs_1" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionVerbs_1" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
                   <Font size="14.0" />
                </font>
                <graphic>
                   <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
-               </graphic></Button>
-            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="35.0" text="VERBS_1" textFill="#116a7b" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="48.0" text="VERBS_1" textFill="#116a7b" />
          </children>
       </Pane>
-      <Button fx:id="Repeat_2" alignment="CENTER" contentDisplay="CENTER" layoutX="373.0" layoutY="201.0" mnemonicParsing="false" onAction="#actionRepeat_1" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY" visible="false">
+      <Button fx:id="Repeat_2" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="210.0" mnemonicParsing="false" onAction="#actionRepeat_1" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY" visible="false">
          <effect>
             <DropShadow height="10.0" radius="4.5" width="10.0">
                <color>
@@ -102,16 +126,53 @@
       </Button>
       <Pane fx:id="Travel_Btn_Pane" layoutX="196.0" layoutY="40.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
-            <Button fx:id="travel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="-1.0" mnemonicParsing="false" onAction="#actionTravel" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+            <Button fx:id="travel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionTravel" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
                   <Font size="14.0" />
                </font>
                <graphic>
                   <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
-               </graphic></Button>
-            <Label layoutX="15.0" layoutY="35.0" text="TRAVEL" textFill="#116a7b" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="15.0" layoutY="48.0" text="TRAVEL" textFill="#116a7b" />
          </children>
       </Pane>
+      <Pane fx:id="House_Btn_Pane" layoutX="273.0" layoutY="40.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="house" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionHouse" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="16.0" layoutY="48.0" text="HOUSE" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Button fx:id="Return" alignment="CENTER" layoutX="89.0" layoutY="382.0" mnemonicParsing="false" onAction="#actionReturn" prefHeight="40.0" prefWidth="95.0" stylesheets="@application.css" text="DICTIONARIES" visible="false">
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0">
+               <color>
+                  <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
 	</children>
    <effect>
       <DropShadow />

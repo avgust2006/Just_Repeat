@@ -58,8 +58,8 @@ explore.wav
 исследоватьexplore.wav
 currency.wav
 валютаcurrency.wav
-check-in.wav
-регистрироватьсяcheck-in.wav
+check in.wav
+регистрироватьсяcheck in.wav
 customs.wav
 таможняcustoms.wav
 hostess.wav
@@ -74,8 +74,8 @@ beach.wav
 пляжbeach.wav
 boarding.wav
 посадкаboarding.wav
-check-out.wav
-выселениеcheck-out.wav
+check out.wav
+выселениеcheck out.wav
 departure.wav
 отправлениеdeparture.wav
 tour.wav
@@ -90,14 +90,14 @@ luggage.wav
 багажluggage.wav
 accomodation.wav
 размещениеaccomodation.wav
-land-in.wav
-приземлитьсяland-in.wav
+land in.wav
+приземлитьсяland in.wav
 room.wav
 комнатаroom.wav
 book.wav
 заказыватьbook.wav
-take-off.wav
-взлететьtake-off.wav
+take off.wav
+взлететьtake off.wav
 connection.wav
 соединениеconnection.wav
 stopread

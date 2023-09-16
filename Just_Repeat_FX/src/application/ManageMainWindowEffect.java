@@ -40,6 +40,9 @@ public abstract class ManageMainWindowEffect {
 		  }
 	  }
 	 
+	 
+	 
+	 
 	/* The method delay appearing  at 1 second of pane and buttons that is pointed in the method parameters*/ 
 	 
 	 public void fadeChange (Button btn,Button btn1, Pane pane) {
