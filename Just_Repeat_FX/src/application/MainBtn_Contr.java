@@ -14,7 +14,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
  
 
 /*
@@ -41,7 +43,9 @@ public class MainBtn_Contr {
 	               verbs_1,   //  "VERBS1"
 	               Repeat_2,  //the button to repeat sound   in right panel
 	               travel,     // "TRAVEL"
-	               house      // "HOUSE"
+	               house,      // "HOUSE"
+	               close,      // "CROSS" button on the right top angle of main window to close application
+	               minimize   // "MINIMIZE" button on the right top angle of main window to close application
 	               ;	 
 	 
 	@FXML 
@@ -55,7 +59,9 @@ public class MainBtn_Contr {
 	private int counter;
 	private Random randomize;
 	private double X_Initlayout,
-	               Y_Initlayout;
+	               Y_Initlayout,
+	               xOffset,
+	               yOffset;
 	IS_Sound_Files inputstream;
 
 	private String currentPane;
@@ -63,14 +69,30 @@ public class MainBtn_Contr {
 	public MainBtn_Contr () {
 		 counter=0;
 		 translate=false;	 
- 		instance_map = new HashMap<String,byte[]>();
+ 		 instance_map = new HashMap<String,byte[]>();
 		 randomize=new Random();
 		 currentPane="";
 		 X_Initlayout=0;
 		 Y_Initlayout=0;
+		 xOffset = 0;
+		 yOffset = 0;
 		 panes= new ArrayList<Pane>();	 
 		 inputstream=new IS_Sound_Files();
 	}
+	
+	   @FXML
+	   private void onMousePressed(MouseEvent event) {
+	    	
+	        xOffset = event.getSceneX();
+	        yOffset = event.getSceneY();
+	    }
+	 
+	   @FXML
+	     
+	    private void onMouseDragged(MouseEvent event) {
+		   Main_Pane.getScene().getWindow().setX(event.getScreenX() - xOffset);
+		   Main_Pane.getScene().getWindow().setY(event.getScreenY() - yOffset);
+	    }
 	
 	/*
 	 * This method handles events of main button actions("FINISH", "DICTIONARIES", "START")
@@ -293,6 +315,30 @@ public class MainBtn_Contr {
   		  
 		  
   }
+	  
+	  /*
+	   * action at "CROSS" button on the right top angle of main window to close application		
+	  */
+	  
+	  public void actionCross (ActionEvent e) {
+		  
+		  Platform.exit();
+		  
+		  
+	  }
+	  
+	  
+	  /*
+	   * action at "MINIMIZE" button on the right top angle of main window to close application		
+	  */
+	  
+	  public void actionMinimize (ActionEvent e) {
+		  
+		  Stage s=(Stage)((Button)e.getSource()).getScene().getWindow();
+		  s.setIconified(true);
+		  
+		  
+	  }
 	 
 	  /*
 	   *  This method will be called when need to remember all panels initial position coordinates (buttons VERBs, VERBs_1, TRAVEL and so on)		

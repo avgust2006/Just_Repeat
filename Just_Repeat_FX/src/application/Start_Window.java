@@ -13,23 +13,18 @@ public class Start_Window extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			/* this without Scene Builder
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-			*/
-			
-			// this with Scene Builder
+		 
 		 	Parent root = FXMLLoader.load(getClass().getResource("Main_Scene.fxml"));
+		 	 
 		 	Scene scene = new Scene(root);
 		  	scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		 	primaryStage.setScene(scene);
-		 	primaryStage.setTitle("JustRepeat.Dictionary");
+		// 	primaryStage.setTitle("JustRepeat.Dictionary");
 		  	primaryStage.getIcons().add(new Image ("https://www.nicepng.com/png/full/417-4170762_streamvpg-world-vector-logo-png.png"));
-		    //	primaryStage.initStyle(StageStyle.TRANSPARENT);
+		    primaryStage.initStyle(StageStyle.TRANSPARENT);
+		  	primaryStage.setResizable(false);
 			primaryStage.show();
+			
 			
 		} catch(Exception e) {
 			e.printStackTrace();
