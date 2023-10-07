@@ -1,0 +1,50 @@
+jacket.wav
+êóğòêàjacket.wav
+jeans.wav
+äæèíñûjeans.wav
+shirt.wav
+ğóáàøêàshirt.wav
+trousers.wav
+áğşêètrousers.wav
+t-shirt.wav
+ôóòáîëêàt-shirt.wav
+belt.wav
+ğåìåíübelt.wav
+cap.wav
+êåïêàcap.wav
+coat.wav
+ïàëüòîcoat.wav
+hat.wav
+øàïêàhat.wav
+sock.wav
+íîñîêsock.wav
+dress.wav
+ïëàòüådress.wav
+glasses.wav
+î÷êèglasses.wav
+skirt.wav
+şáêàskirt.wav
+try on.wav
+ïğèìåğèòütry on.wav
+put on.wav
+íàäåòüput on.wav
+robe.wav
+õàëàòrobe.wav
+shorts.wav
+øîğòûshorts.wav
+suit.wav
+êîñòşìsuit.wav
+take off.wav
+ñíÿòütake off.wav
+boots.wav
+áîòèíêèboots.wav
+footwear.wav
+îáóâüfootwear.wav
+pants.wav
+òğóñûpants.wav
+shoes.wav
+òóôëèshoes.wav
+sneakers.wav
+êğîññîâêèsneakers.wav
+slippers.wav
+òàïî÷êèslippers.wav

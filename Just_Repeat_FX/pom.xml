@@ -112,17 +112,19 @@
          
           </plugin>-->
           
-          <plugin>
+     <plugin>
     <groupId>org.panteleyev</groupId>
     <artifactId>jpackage-maven-plugin</artifactId>
     <version>1.5.1</version>
     
     <configuration>
+		 
 		<destination>jpackage</destination>
             <name>JR</name>
             <runtimeImage>target/JustRepeat</runtimeImage>
-            <type>EXE</type>
+            <type>MSI</type>
             <appVersion>1.0.0</appVersion>
+            <icon></icon>
 	</configuration>
         </plugin>	  
     </plugins>
