@@ -48,3 +48,11 @@ sneakers.wav
 кроссовкиsneakers.wav
 slippers.wav
 тапочкиslippers.wav
+hood.wav
+капюшонhood.wav
+jersey.wav
+свитерjersey.wav
+jewelry.wav
+драгоценностиjewelry.wav
+watch.wav
+часыwatch.wav

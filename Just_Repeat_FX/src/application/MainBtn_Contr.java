@@ -32,7 +32,8 @@ public class MainBtn_Contr {
 	             Verbs_Btn_Pane,  // pane for activate "VERBS" button dictionary
 	             Verbs_Btn_Pane1,  // pane for activate "VERBS1" button dictionary
 	             Travel_Btn_Pane,  // pane for activate "TRAVEL" button dictionary
-	             House_Btn_Pane;  //  pane for activate "TRAVEL" button dictionary
+	             House_Btn_Pane,  //  pane for activate "TRAVEL" button dictionary
+	             Clothes_Btn_Pane; //  pane for activate "CLOTHES" button dictionary
  
 	@FXML
 	private Button Main_Button,  // "FINISH", "DICTIONARIES", "START" buttons
@@ -44,6 +45,7 @@ public class MainBtn_Contr {
 	               Repeat_2,  //the button to repeat sound   in right panel
 	               travel,     // "TRAVEL"
 	               house,      // "HOUSE"
+	               clothes,    // "CLOTHES"
 	               close,      // "CROSS" button on the right top angle of main window to close application
 	               minimize   // "MINIMIZE" button on the right top angle of main window to close application
 	               ;	 
@@ -202,6 +204,23 @@ public class MainBtn_Contr {
 		  setPaneInCentral(House_Btn_Pane);
 		  Main_Button.setText("START");
 		  inputstream.fadeChange(Main_Button, house, House_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
+	   * This method handles of CLOTHES button pressing event		
+	  */ 
+	  
+	  public void actionClothes(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/clothes/");
+		  clothes.setOpacity(0);
+		  inputstream.setOnePaneVisible(Clothes_Btn_Pane, panes);
+		  takePaneInitPosition(Clothes_Btn_Pane); 
+		  setPaneInCentral(Clothes_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, clothes, Clothes_Btn_Pane) ;
 		  Main_Button.setVisible(true); 
 		  
 	  }
@@ -377,6 +396,7 @@ public class MainBtn_Contr {
 		  panes.add(Verbs_Btn_Pane1);
 		  panes.add(Travel_Btn_Pane);
 		  panes.add(House_Btn_Pane);
+		  panes.add(Clothes_Btn_Pane);
 	  }
 	  
 	  /*

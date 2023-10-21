@@ -9,12 +9,13 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 <?xml-model href=""?>
 
 <Pane fx:id="Main_Pane" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="450.0" prefWidth="684.0" style="-fx-background-color: C2DEDC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainBtn_Contr">
 	<children>
-      <Circle fill="#ccc1adfd" layoutX="19.0" layoutY="16.0" radius="11.0" stroke="#cdc2ae" strokeType="INSIDE">
+      <Circle fill="#ece5c7fc" layoutX="19.0" layoutY="16.0" radius="11.0" stroke="#ece5c7" strokeType="INSIDE">
          <effect>
             <DropShadow height="10.0" radius="4.5" width="10.0">
                <color>
@@ -214,6 +215,35 @@
                </color>
             </DropShadow>
          </effect></Button>
+      <Pane fx:id="Clothes_Btn_Pane" layoutX="323.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="clothes" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionClothes" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="10.0" layoutY="48.0" text="CLOTHES" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane layoutX="57.0" layoutY="110.0" prefHeight="200.0" prefWidth="576.0" style="-fx-background-color: #ECE5C7;">
+         <children>
+            <Text fill="#116a7b" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  ENG/ РУС.    Choose dictionary. Listen word, watch how it is written, repeat the word in loud*. Press &quot;TRANSLATION&quot; button, check yourself. Follow next word pressing the &quot;NEXT&quot; button  /  Выберите словарь. Прослушайте слово, посмотрите как оно пишется,  повторите слово вслух*, Нажмите &quot;TRANSLATION&quot; кнопку, проверте себя. Переходите к следующему слову, нажимая кнпку &quot;NEXT&quot;." wrappingWidth="576.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
 	</children>
    <effect>
       <DropShadow />
