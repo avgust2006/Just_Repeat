@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
  
 
@@ -33,7 +34,8 @@ public class MainBtn_Contr {
 	             Verbs_Btn_Pane1,  // pane for activate "VERBS1" button dictionary
 	             Travel_Btn_Pane,  // pane for activate "TRAVEL" button dictionary
 	             House_Btn_Pane,  //  pane for activate "TRAVEL" button dictionary
-	             Clothes_Btn_Pane; //  pane for activate "CLOTHES" button dictionary
+	             Clothes_Btn_Pane, //  pane for activate "CLOTHES" button dictionary
+	             Food_Btn_Pane;   //  pane for activate "FOOD" button dictionary
  
 	@FXML
 	private Button Main_Button,  // "FINISH", "DICTIONARIES", "START" buttons
@@ -46,13 +48,17 @@ public class MainBtn_Contr {
 	               travel,     // "TRAVEL"
 	               house,      // "HOUSE"
 	               clothes,    // "CLOTHES"
+	               food,       // "FOOD"
 	               close,      // "CROSS" button on the right top angle of main window to close application
-	               minimize   // "MINIMIZE" button on the right top angle of main window to close application
-	               ;	 
+	               minimize ;  // "MINIMIZE" button on the right top angle of main window to close application
+	               	 
 	 
 	@FXML 
 	private Label Word,        // left panel
 	              Translation;  //right panel 
+	
+	@FXML 
+	private Text Explanation; //Explanation text for starting of work;
 	 
 	
 	 
@@ -108,6 +114,7 @@ public class MainBtn_Contr {
 		  
 		 if ( Main_Button.getText().equalsIgnoreCase("DICTIONARIES")) {
 		   Main_Button.setVisible(false);  
+		   Explanation.setVisible(false);
 		   fillDictPanes();
 		   inputstream.setAllPaneVisible(true,panes);	
 		  }
@@ -221,6 +228,23 @@ public class MainBtn_Contr {
 		  setPaneInCentral(Clothes_Btn_Pane);
 		  Main_Button.setText("START");
 		  inputstream.fadeChange(Main_Button, clothes, Clothes_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
+	   * This method handles of FOOD button pressing event		
+	  */ 
+	  
+	  public void actionFood(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/food/");
+		  food.setOpacity(0);
+		  inputstream.setOnePaneVisible(Food_Btn_Pane, panes);
+		  takePaneInitPosition(Food_Btn_Pane); 
+		  setPaneInCentral(Food_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, food, Food_Btn_Pane) ;
 		  Main_Button.setVisible(true); 
 		  
 	  }
@@ -397,6 +421,7 @@ public class MainBtn_Contr {
 		  panes.add(Travel_Btn_Pane);
 		  panes.add(House_Btn_Pane);
 		  panes.add(Clothes_Btn_Pane);
+		  panes.add(Food_Btn_Pane);
 	  }
 	  
 	  /*

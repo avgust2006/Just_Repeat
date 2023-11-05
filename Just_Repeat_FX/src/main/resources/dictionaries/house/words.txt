@@ -32,8 +32,8 @@ floor.wav
 комната1room.wav
 wall.wav
 стенаwall.wav
-chair.wav
-стулchair.wav
+1chair.wav
+стул1chair.wav
 light.wav
 светlight.wav
 table.wav

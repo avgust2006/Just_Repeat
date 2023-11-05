@@ -83,12 +83,14 @@
             <noHeaderFiles>true</noHeaderFiles>
              <stripDebug>true</stripDebug>
               <noManPages>true</noManPages>
+             
               <launcher>start</launcher> 
            
             <mainClass>application.Start_Window</mainClass>
             
            <jlinkImageName>JustRepeat</jlinkImageName>  
-       	                   		 
+            
+       	              		 
         </configuration>   
         </plugin>   
      
@@ -121,10 +123,14 @@
 		 
 		<destination>jpackage</destination>
             <name>JR</name>
-            <runtimeImage>target/JustRepeat</runtimeImage>
+           <runtimeImage>target/JustRepeat</runtimeImage> 
             <type>MSI</type>
             <appVersion>1.0.0</appVersion>
             <icon></icon>
+           
+            <winShortcut>true</winShortcut>
+            <winDirChooser>true</winDirChooser>
+             		 
 	</configuration>
         </plugin>	  
     </plugins>

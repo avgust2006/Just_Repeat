@@ -25,7 +25,7 @@
          </effect>
       </Circle>
       <FontIcon fill="#000000b9" iconColor="#116a7b" iconSize="14" layoutX="9.0" layoutY="21.0" stroke="#00000007" strokeLineCap="ROUND" text="JR" textAlignment="CENTER" wrappingWidth="19.999999999999886" />
-		<Button fx:id="Main_Button" alignment="CENTER" contentDisplay="CENTER" layoutX="291.0" layoutY="392.0" mnemonicParsing="false" onAction="#actionPerformed" prefHeight="30.0" prefWidth="108.0" stylesheets="@application.css" text="DICTIONARIES" textAlignment="CENTER">
+		<Button fx:id="Main_Button" alignment="CENTER" contentDisplay="CENTER" layoutX="291.0" layoutY="395.0" mnemonicParsing="false" onAction="#actionPerformed" prefHeight="30.0" prefWidth="108.0" stylesheets="@application.css" text="DICTIONARIES" textAlignment="CENTER">
          <effect>
             <DropShadow height="10.0" radius="4.5" width="10.0">
                <color>
@@ -235,17 +235,36 @@
             <Label layoutX="10.0" layoutY="48.0" text="CLOTHES" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane layoutX="57.0" layoutY="110.0" prefHeight="200.0" prefWidth="576.0" style="-fx-background-color: #ECE5C7;">
+      <Text fx:id="Explanation" fill="#116a7b" layoutX="54.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ENG.  For every foreign words: listen word, watch how  it is written, repeat the word in loud.&#10; &#10; RUS.  Для каждого иностранного слова: прослушайте слово, посмотрите как оно &#10; пишется,  повторите слово вслух. " wrappingWidth="576.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Pane fx:id="Food_Btn_Pane" layoutX="393.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
-            <Text fill="#116a7b" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  ENG/ РУС.    Choose dictionary. Listen word, watch how it is written, repeat the word in loud*. Press &quot;TRANSLATION&quot; button, check yourself. Follow next word pressing the &quot;NEXT&quot; button  /  Выберите словарь. Прослушайте слово, посмотрите как оно пишется,  повторите слово вслух*, Нажмите &quot;TRANSLATION&quot; кнопку, проверте себя. Переходите к следующему слову, нажимая кнпку &quot;NEXT&quot;." wrappingWidth="576.0">
+            <Button fx:id="food" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionFood" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
                   <Font size="14.0" />
                </font>
-            </Text>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="19.0" layoutY="48.0" text="FOOD" textFill="#116a7b" />
          </children>
       </Pane>
 	</children>
    <effect>
-      <DropShadow />
+      <DropShadow height="10.0" radius="4.5" width="10.0">
+         <color>
+            <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+         </color></DropShadow>
    </effect>
 </Pane>
