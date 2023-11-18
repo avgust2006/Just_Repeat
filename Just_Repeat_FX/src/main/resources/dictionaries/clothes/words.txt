@@ -74,3 +74,4 @@ socks.wav
 носкиsocks.wav
 wallet.wav
 кошелекwallet.wav
+stopread

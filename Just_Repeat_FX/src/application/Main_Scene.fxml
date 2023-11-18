@@ -260,6 +260,46 @@
             <Label layoutX="19.0" layoutY="48.0" text="FOOD" textFill="#116a7b" />
          </children>
       </Pane>
+      <Pane fx:id="Nature_Btn_Pane" layoutX="463.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="nature" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionNature" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="13.0" layoutY="48.0" text="NATURE" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Transport_Btn_Pane" layoutX="533.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="transport" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionTransport" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="2.0" layoutY="48.0" text="TRANSPORT" textFill="#116a7b" />
+         </children>
+      </Pane>
 	</children>
    <effect>
       <DropShadow height="10.0" radius="4.5" width="10.0">
