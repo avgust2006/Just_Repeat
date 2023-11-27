@@ -38,7 +38,8 @@ public class MainBtn_Contr {
 	             Clothes_Btn_Pane, //  pane for activate "CLOTHES" button dictionary
 	             Food_Btn_Pane,   //  pane for activate "FOOD" button dictionary
 	             Nature_Btn_Pane,   //  pane for activate "NATURE" button dictionary
-	             Transport_Btn_Pane; //  pane for activate "TRANSPORT" button dictionary
+	             Transport_Btn_Pane, //  pane for activate "TRANSPORT" button dictionary
+	             Body_Btn_Pane; //  pane for activate "BODY" button dictionary
  
 	@FXML
 	private Button Main_Button,  // "FINISH", "DICTIONARIES", "START" buttons
@@ -54,6 +55,7 @@ public class MainBtn_Contr {
 	               food,       // "FOOD"
 	               nature,     // "NATURE"
 	               transport,  // "TRANSPORT"
+	               body,      // "BODY"
 	               close,      // "CROSS" button on the right top angle of main window to close application
 	               minimize ;  // "MINIMIZE" button on the right top angle of main window to close application
 	               	 
@@ -289,6 +291,23 @@ public class MainBtn_Contr {
 	  }
 	  
 	  /*
+	   * This method handles of BODY button pressing event		
+	  */ 
+	  
+	  public void actionBody(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/body/");
+		  body.setOpacity(0);
+		  inputstream.setOnePaneVisible(Body_Btn_Pane, panes);
+		  takePaneInitPosition(Body_Btn_Pane); 
+		  setPaneInCentral(Body_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, body, Body_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
 	   * handling  NEXT/TRANSLATION button (located in the right bottom angle)		
 	  */
 	  
@@ -465,6 +484,7 @@ public class MainBtn_Contr {
 		  panes.add(Food_Btn_Pane);
 		  panes.add(Nature_Btn_Pane);
 		  panes.add(Transport_Btn_Pane);
+		  panes.add(Body_Btn_Pane);
 	  }
 	  
 	  /*

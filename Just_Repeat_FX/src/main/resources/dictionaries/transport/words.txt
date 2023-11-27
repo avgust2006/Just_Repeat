@@ -56,3 +56,34 @@ turn.wav
 поворачиватьturn.wav
 wheel.wav
 колесоwheel.wav
+accident.wav
+аварияaccident.wav
+address.wav
+адресaddress.wav
+direction.wav
+направлениеdirection.wav
+drop off.wav
+высаживатьdrop off.wav
+glass.wav
+стеклоglass.wav
+insurance.wav
+страховкаinsurance.wav
+map.wav
+картаmap.wav
+navigate.wav
+перемещатьсяnavigate.wav
+parking.wav
+парковкаparking.wav
+passenger.wav
+пассажирpassenger.wav
+pick up.wav
+забратьpick up.wav
+sign.wav
+знакsign.wav
+traffic light.wav
+светофорtraffic light.wav
+transmission.wav
+коробка передачtransmission.wav
+trunk.wav
+багажникtrunk.wav
+stopread
