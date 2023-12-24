@@ -320,6 +320,86 @@
             <Label layoutX="20.0" layoutY="48.0" text="BODY" textFill="#116a7b" />
          </children>
       </Pane>
+      <Pane fx:id="Imp_Btn_Pane" layoutX="114.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="important" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionImportant" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="2.0" layoutY="48.0" text="IMPORTANT" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Education_Btn_Pane" layoutX="184.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="education" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionEducation" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="2.0" layoutY="48.0" text="EDUCATION" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Job_Btn_Pane" layoutX="254.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="job" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionJob" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="25.0" layoutY="48.0" text="JOB" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Sport_Btn_Pane" layoutX="323.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="sport" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionSport" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="17.0" layoutY="48.0" text="SPORT" textFill="#116a7b" />
+         </children>
+      </Pane>
 	</children>
    <effect>
       <DropShadow height="10.0" radius="4.5" width="10.0">

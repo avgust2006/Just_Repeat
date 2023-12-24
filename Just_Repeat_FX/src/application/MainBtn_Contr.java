@@ -16,7 +16,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
  
@@ -39,7 +38,11 @@ public class MainBtn_Contr {
 	             Food_Btn_Pane,   //  pane for activate "FOOD" button dictionary
 	             Nature_Btn_Pane,   //  pane for activate "NATURE" button dictionary
 	             Transport_Btn_Pane, //  pane for activate "TRANSPORT" button dictionary
-	             Body_Btn_Pane; //  pane for activate "BODY" button dictionary
+	             Body_Btn_Pane, //  pane for activate "BODY" button dictionary
+	             Imp_Btn_Pane,  //  pane for activate "IMPORTANT" button dictionary
+	             Education_Btn_Pane,  //  pane for activate "EDUCATION" button dictionary
+	             Sport_Btn_Pane,  //  pane for activate "SPORT" button dictionary
+                 Job_Btn_Pane ;  //  pane for activate "JOB" button dictionary
  
 	@FXML
 	private Button Main_Button,  // "FINISH", "DICTIONARIES", "START" buttons
@@ -56,6 +59,10 @@ public class MainBtn_Contr {
 	               nature,     // "NATURE"
 	               transport,  // "TRANSPORT"
 	               body,      // "BODY"
+	               important, // "IMPORTANT"
+	               education, // "EDUCATION"
+	               sport,// "SPORT"
+	               job, // "JOB"
 	               close,      // "CROSS" button on the right top angle of main window to close application
 	               minimize ;  // "MINIMIZE" button on the right top angle of main window to close application
 	               	 
@@ -308,6 +315,74 @@ public class MainBtn_Contr {
 	  }
 	  
 	  /*
+	   * This method handles of IMPORTANT button pressing event		
+	  */ 
+	  
+	  public void actionImportant(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/important/");
+		  important.setOpacity(0);
+		  inputstream.setOnePaneVisible(Imp_Btn_Pane, panes);
+		  takePaneInitPosition(Imp_Btn_Pane); 
+		  setPaneInCentral(Imp_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, important, Imp_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
+	   * This method handles of EDUCATION button pressing event		
+	  */ 
+	  
+	  public void actionEducation(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/education/");
+		  education.setOpacity(0);
+		  inputstream.setOnePaneVisible(Education_Btn_Pane, panes);
+		  takePaneInitPosition(Education_Btn_Pane); 
+		  setPaneInCentral(Education_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, education, Education_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	   
+	  /*
+	   * This method handles of JOB button pressing event		
+	  */ 
+	  
+	  public void actionJob(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/job/");
+		  job.setOpacity(0);
+		  inputstream.setOnePaneVisible(Job_Btn_Pane, panes);
+		  takePaneInitPosition(Job_Btn_Pane); 
+		  setPaneInCentral(Job_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, job, Job_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
+	   * This method handles of SPORT button pressing event		
+	  */ 
+	  
+	  public void actionSport(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/sport/");
+		  sport.setOpacity(0);
+		  inputstream.setOnePaneVisible(Sport_Btn_Pane, panes);
+		  takePaneInitPosition(Sport_Btn_Pane); 
+		  setPaneInCentral(Sport_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, sport, Sport_Btn_Pane);
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
 	   * handling  NEXT/TRANSLATION button (located in the right bottom angle)		
 	  */
 	  
@@ -485,6 +560,10 @@ public class MainBtn_Contr {
 		  panes.add(Nature_Btn_Pane);
 		  panes.add(Transport_Btn_Pane);
 		  panes.add(Body_Btn_Pane);
+		  panes.add(Imp_Btn_Pane);
+		  panes.add(Education_Btn_Pane);
+		  panes.add(Job_Btn_Pane);
+		  panes.add(Sport_Btn_Pane);
 	  }
 	  
 	  /*
