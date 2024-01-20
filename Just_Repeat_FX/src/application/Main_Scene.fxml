@@ -122,7 +122,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="48.0" text="VERBS_1" textFill="#116a7b" />
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="48.0" text="VERBS+" textFill="#116a7b" />
          </children>
       </Pane>
       <Button fx:id="Repeat_2" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="210.0" mnemonicParsing="false" onAction="#actionRepeat_1" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY" visible="false">
@@ -398,6 +398,127 @@
                </effect>
             </Button>
             <Label layoutX="17.0" layoutY="48.0" text="SPORT" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Family_Btn_Pane" layoutX="393.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="family" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionFamily" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="17.0" layoutY="48.0" text="FAMILY" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Health_Btn_Pane" layoutX="463.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="health" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionHealth" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="14.0" layoutY="48.0" text="HEALTH" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Date_Btn_Pane" layoutX="539.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="date" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionDate" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="9.0" layoutY="40.0" text="DATE and" textFill="#116a7b" />
+            <Label layoutX="8.0" layoutY="54.0" text="NUMBERS" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Money_Btn_Pane" layoutX="54.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="money" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionMoney" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="14.0" layoutY="48.0" text="MONEY" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Pronoun_Btn_Pane" layoutX="137.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="pronoun" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionPronoun" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="3.0" layoutY="48.0" text="PRONOUNS" textFill="#116a7b" />
+         </children>
+      </Pane>
+      <Pane fx:id="Preposition_Btn_Pane" layoutX="219.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+         <children>
+            <Button fx:id="preposition" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionPreposition" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
+               </graphic>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" width="5.0">
+                     <color>
+                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label layoutX="-1.0" layoutY="48.0" text="PREPOSITION" textFill="#116a7b" />
          </children>
       </Pane>
 	</children>

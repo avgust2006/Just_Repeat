@@ -39,7 +39,7 @@ plumber.wav
 postman.wav
 почтальонpostman.wav
 retire.wav
-увольнятьсяretire.wav
+уходить на пенсиюretire.wav
 scientist.wav
 ученыйscientist.wav
 surgeon.wav
@@ -86,4 +86,6 @@ accept.wav
 приниматьaccept.wav
 application.wav
 заявлениеapplication.wav
+fire.wav
+увольнятьfire.wav
 stopread

@@ -31,7 +31,7 @@ public class MainBtn_Contr {
 	
 	private Pane Main_Pane,   //main window of program
 	             Verbs_Btn_Pane,  // pane for activate "VERBS" button dictionary
-	             Verbs_Btn_Pane1,  // pane for activate "VERBS1" button dictionary
+	             Verbs_Btn_Pane1,  // pane for activate "VERBS+" button dictionary
 	             Travel_Btn_Pane,  // pane for activate "TRAVEL" button dictionary
 	             House_Btn_Pane,  //  pane for activate "TRAVEL" button dictionary
 	             Clothes_Btn_Pane, //  pane for activate "CLOTHES" button dictionary
@@ -42,6 +42,12 @@ public class MainBtn_Contr {
 	             Imp_Btn_Pane,  //  pane for activate "IMPORTANT" button dictionary
 	             Education_Btn_Pane,  //  pane for activate "EDUCATION" button dictionary
 	             Sport_Btn_Pane,  //  pane for activate "SPORT" button dictionary
+	             Family_Btn_Pane,  //  pane for activate "FAMILY" button dictionary
+	             Health_Btn_Pane,  //  pane for activate "HEALTH" button dictionary
+	             Date_Btn_Pane,   //  pane for activate "DATE and NUMBERS" button dictionary
+	             Money_Btn_Pane,  //  pane for activate "MONEY" button dictionary
+	             Pronoun_Btn_Pane, //  pane for activate "PRONOUNS" button dictionary
+	             Preposition_Btn_Pane, //  pane for activate "PREPOSITION" button dictionary
                  Job_Btn_Pane ;  //  pane for activate "JOB" button dictionary
  
 	@FXML
@@ -61,8 +67,14 @@ public class MainBtn_Contr {
 	               body,      // "BODY"
 	               important, // "IMPORTANT"
 	               education, // "EDUCATION"
-	               sport,// "SPORT"
-	               job, // "JOB"
+	               sport,     // "SPORT"
+	               job,       // "JOB"
+	               family,    // "FAMILY"
+	               health,    // "HEALTH"
+	               money,     // "MONEY"
+	               pronoun,   // "PRONOUNS"
+	               preposition,// "PREPOSITION"
+	               date,      // "DATE and NUMBERS"
 	               close,      // "CROSS" button on the right top angle of main window to close application
 	               minimize ;  // "MINIMIZE" button on the right top angle of main window to close application
 	               	 
@@ -348,6 +360,7 @@ public class MainBtn_Contr {
 		  
 	  }
 	   
+	  	  
 	  /*
 	   * This method handles of JOB button pressing event		
 	  */ 
@@ -366,6 +379,24 @@ public class MainBtn_Contr {
 	  }
 	  
 	  /*
+	   * This method handles of FAMILY button pressing event		
+	  */ 
+	  
+	  public void actionFamily(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/family/");
+		  family.setOpacity(0);
+		  inputstream.setOnePaneVisible(Family_Btn_Pane, panes);
+		  takePaneInitPosition(Family_Btn_Pane); 
+		  setPaneInCentral(Family_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, family, Family_Btn_Pane) ;
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  
+	  /*
 	   * This method handles of SPORT button pressing event		
 	  */ 
 	  
@@ -381,6 +412,94 @@ public class MainBtn_Contr {
 		  Main_Button.setVisible(true); 
 		  
 	  }
+	  
+	  /*
+	   * This method handles of HEALTH button pressing event		
+	  */ 
+	  
+	  public void actionHealth(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/health/");
+		  health.setOpacity(0);
+		  inputstream.setOnePaneVisible(Health_Btn_Pane, panes);
+		  takePaneInitPosition(Health_Btn_Pane); 
+		  setPaneInCentral(Health_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, health, Health_Btn_Pane);
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  
+	  /*
+	   * This method handles of DATE and NUMBERS button pressing event		
+	  */ 
+	  
+	  public void actionDate(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/numbers/");
+		  date.setOpacity(0);
+		  inputstream.setOnePaneVisible(Date_Btn_Pane, panes);
+		  takePaneInitPosition(Date_Btn_Pane); 
+		  setPaneInCentral(Date_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, date, Date_Btn_Pane);
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  
+	  /*
+	   * This method handles of MONEY button pressing event		
+	  */ 
+	  
+	  public void actionMoney(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/money/");
+		  money.setOpacity(0);
+		  inputstream.setOnePaneVisible(Money_Btn_Pane, panes);
+		  takePaneInitPosition(Money_Btn_Pane); 
+		  setPaneInCentral(Money_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, money, Money_Btn_Pane);
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
+	   * This method handles of PRONOUNS button pressing event		
+	  */ 
+	  
+	  public void actionPronoun(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/pronoun/");
+		  pronoun.setOpacity(0);
+		  inputstream.setOnePaneVisible(Pronoun_Btn_Pane, panes);
+		  takePaneInitPosition(Pronoun_Btn_Pane); 
+		  setPaneInCentral(Pronoun_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, pronoun, Pronoun_Btn_Pane);
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
+	   * This method handles of PREPOSITION button pressing event		
+	  */ 
+	  
+	  public void actionPreposition(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/preposition/");
+		  preposition.setOpacity(0);
+		  inputstream.setOnePaneVisible(Preposition_Btn_Pane, panes);
+		  takePaneInitPosition(Preposition_Btn_Pane); 
+		  setPaneInCentral(Preposition_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, preposition, Preposition_Btn_Pane);
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
 	  
 	  /*
 	   * handling  NEXT/TRANSLATION button (located in the right bottom angle)		
@@ -564,6 +683,14 @@ public class MainBtn_Contr {
 		  panes.add(Education_Btn_Pane);
 		  panes.add(Job_Btn_Pane);
 		  panes.add(Sport_Btn_Pane);
+		  panes.add(Family_Btn_Pane);
+		  panes.add(Health_Btn_Pane); 
+		  panes.add(Date_Btn_Pane);
+		  panes.add(Money_Btn_Pane);
+		  panes.add(Pronoun_Btn_Pane);
+		  panes.add(Preposition_Btn_Pane);
+		  
+		  
 	  }
 	  
 	  /*
