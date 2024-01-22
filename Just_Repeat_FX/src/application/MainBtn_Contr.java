@@ -47,7 +47,9 @@ public class MainBtn_Contr {
 	             Date_Btn_Pane,   //  pane for activate "DATE and NUMBERS" button dictionary
 	             Money_Btn_Pane,  //  pane for activate "MONEY" button dictionary
 	             Pronoun_Btn_Pane, //  pane for activate "PRONOUNS" button dictionary
-	             Preposition_Btn_Pane, //  pane for activate "PREPOSITION" button dictionary
+	             Preposition_Btn_Pane, //  pane for activate "PREPOSITION" button dictionary 
+	             Adjective_Btn_Pane,  //  pane for activate "ADJECTIVES" button dictionary
+	             Common_Btn_Pane, //  pane for activate "COMMON" button dictionary 
                  Job_Btn_Pane ;  //  pane for activate "JOB" button dictionary
  
 	@FXML
@@ -74,6 +76,8 @@ public class MainBtn_Contr {
 	               money,     // "MONEY"
 	               pronoun,   // "PRONOUNS"
 	               preposition,// "PREPOSITION"
+	               common,     // "COMMON PHRASES"
+	               adjective,  // "ADJECTIVES"
 	               date,      // "DATE and NUMBERS"
 	               close,      // "CROSS" button on the right top angle of main window to close application
 	               minimize ;  // "MINIMIZE" button on the right top angle of main window to close application
@@ -502,6 +506,41 @@ public class MainBtn_Contr {
 	  
 	  
 	  /*
+	   * This method handles of COMMON PHRASES button pressing event		
+	  */ 
+	  
+	  public void actionCommon(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/common/");
+		  common.setOpacity(0);
+		  inputstream.setOnePaneVisible(Common_Btn_Pane, panes);
+		  takePaneInitPosition(Common_Btn_Pane); 
+		  setPaneInCentral(Common_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, common, Common_Btn_Pane);
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  
+	  /*
+	   * This method handles of ADJECTIVES button pressing event		
+	  */ 
+	  
+	  public void actionAdjective(ActionEvent e) {
+		  
+		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/adjective/");
+		  adjective.setOpacity(0);
+		  inputstream.setOnePaneVisible(Adjective_Btn_Pane, panes);
+		  takePaneInitPosition(Adjective_Btn_Pane); 
+		  setPaneInCentral(Adjective_Btn_Pane);
+		  Main_Button.setText("START");
+		  inputstream.fadeChange(Main_Button, adjective, Adjective_Btn_Pane);
+		  Main_Button.setVisible(true); 
+		  
+	  }
+	  
+	  /*
 	   * handling  NEXT/TRANSLATION button (located in the right bottom angle)		
 	  */
 	  
@@ -689,7 +728,8 @@ public class MainBtn_Contr {
 		  panes.add(Money_Btn_Pane);
 		  panes.add(Pronoun_Btn_Pane);
 		  panes.add(Preposition_Btn_Pane);
-		  
+		  panes.add(Common_Btn_Pane);
+		  panes.add(Adjective_Btn_Pane);
 		  
 	  }
 	  
