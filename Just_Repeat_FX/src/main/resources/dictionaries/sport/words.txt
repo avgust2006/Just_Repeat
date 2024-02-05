@@ -8,8 +8,8 @@ defeat.wav
 поражениеdefeat.wav
 field.wav
 полеfield.wav
-half-time.wav
-перерывhalf-time.wav
+break.wav
+перерывbreak.wav
 draw.wav
 ничьяdraw.wav
 penalty.wav
@@ -54,8 +54,8 @@ gym.wav
 спортзалgym.wav
 shoot.wav
 стрелятьshoot.wav
-judge.wav
-судьяjudge.wav
+referee.wav
+судьяreferee.wav
 score.wav
 счетscore.wav
 teammate.wav
@@ -82,4 +82,6 @@ race.wav
 гонкаrace.wav
 train.wav
 тренироватьtrain.wav
+support.wav
+поддерживатьsupport.wav
 stopread

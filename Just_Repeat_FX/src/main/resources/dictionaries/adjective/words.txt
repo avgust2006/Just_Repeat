@@ -68,8 +68,6 @@ late.wav
 позднийlate.wav
 lazy.wav
 ленивыйlazy.wav
-little.wav
-маленькийlittle.wav
 long.wav
 длинныйlong.wav
 loud.wav
@@ -88,8 +86,6 @@ ordinary.wav
 обычныйordinary.wav
 poor.wav
 бедныйpoor.wav
-previous.wav
-предыдущийprevious.wav
 quiet.wav
 тихийquiet.wav
 rare.wav
@@ -101,7 +97,7 @@ simple.wav
 smart.wav
 умныйsmart.wav
 small.wav
-небольшойsmall.wav
+маленькийsmall.wav
 soft.wav
 м€гкийsoft.wav
 straight.wav
@@ -128,10 +124,14 @@ wonderful.wav
 замечательныйwonderful.wav
 wrong.wav
 неправильныйwrong.wav
-silly.wav
-глупыйsilly.wav
+stupid.wav
+глупыйstupid.wav
 able.wav
 способныйable.wav
 short.wav
 короткийshort.wav
+important.wav
+важныйimportant.wav
+thick.wav
+толстыйthick.wav
 stopread

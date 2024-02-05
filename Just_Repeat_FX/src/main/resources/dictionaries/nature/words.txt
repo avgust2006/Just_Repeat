@@ -8,8 +8,8 @@ forest.wav
 лесforest.wav
 grass.wav
 траваgrass.wav
-ground.wav
-земляground.wav
+land.wav
+земляland.wav
 leaf.wav
 листleaf.wav
 mushroom.wav
@@ -82,4 +82,14 @@ shine.wav
 светитьshine.wav
 wolf.wav
 волкwolf.wav
+life.wav
+жизньlife.wav
+live.wav
+житьlive.wav
+flower.wav
+цветокflower.wav
+wind.wav
+ветерwind.wav
+park.wav
+паркpark.wav
 stopread

@@ -98,4 +98,6 @@ shower.wav
 душshower.wav
 wash.wav
 стиратьwash.wav
+clock.wav
+часыclock.wav
 stopread

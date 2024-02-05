@@ -498,7 +498,9 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="3.0" layoutY="48.0" text="PRONOUNS" textFill="#116a7b" />
+            <Label layoutX="3.0" layoutY="37.0" text="PRONOUNS" textFill="#116a7b" />
+            <Label layoutX="23.0" layoutY="48.0" text="and " textFill="#116a7b" />
+            <Label layoutX="-11.0" layoutY="61.0" text="CONJUNCTIONS" textFill="#116a7b" />
          </children>
       </Pane>
       <Pane fx:id="Preposition_Btn_Pane" layoutX="219.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
@@ -518,7 +520,9 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="-5.0" layoutY="48.0" text="PREPOSITIONS" textFill="#116a7b" />
+            <Label layoutX="-5.0" layoutY="37.0" text="PREPOSITIONS" textFill="#116a7b" />
+            <Label layoutX="23.0" layoutY="48.0" text="and " textFill="#116a7b" />
+            <Label layoutX="9.0" layoutY="61.0" text="ADVERBS" textFill="#116a7b" />
          </children>
       </Pane>
       <Pane fx:id="Common_Btn_Pane" layoutX="324.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">

@@ -52,8 +52,8 @@ November.wav
 НоябрьNovember.wav
 October.wav
 ОктябрьOctober.wav
-one.wav
-одинone.wav
+1one.wav
+один1one.wav
 point.wav
 точкаpoint.wav
 Saturday.wav
@@ -88,8 +88,8 @@ twelve.wav
 двенадцатьtwelve.wav
 twenty one.wav
 двадцать одинtwenty one.wav
-twenty.wav
-двадцатьtwenty.wav
+1twenty.wav
+двадцать1twenty.wav
 two.wav
 дваtwo.wav
 Wednesday.wav
@@ -98,3 +98,12 @@ weekend.wav
 выходныеweekend.wav
 zero.wav
 нольzero.wav
+time.wav
+времяtime.wav
+minute.wav
+минутаminute.wav
+hour.wav
+часhour.wav
+eighth.wav
+восьмойeighth.wav
+stopread

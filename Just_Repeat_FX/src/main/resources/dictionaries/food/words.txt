@@ -70,8 +70,8 @@ bake.wav
 печьbake.wav
 cake.wav
 тортcake.wav
-candies.wav
-конфетыcandies.wav
+candy.wav
+конфетаcandy.wav
 chocolate.wav
 шоколадchocolate.wav
 cookie.wav
@@ -80,8 +80,8 @@ flour.wav
 мукаflour.wav
 juice.wav
 сокjuice.wav
-nuts.wav
-орехиnuts.wav
+nut.wav
+орехnut.wav
 1oil.wav
 масло1oil.wav
 orange.wav
@@ -96,4 +96,8 @@ butter.wav
 сливочное маслоbutter.wav
 cheese.wav
 сырcheese.wav
+cook.wav
+готовитьcook.wav
+soup.wav
+супsoup.wav
 stopread

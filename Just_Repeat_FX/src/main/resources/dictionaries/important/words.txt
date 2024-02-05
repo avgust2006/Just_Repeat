@@ -74,16 +74,6 @@ other.wav
 другойother.wav
 some.wav
 некоторыйsome.wav
-their.wav
-ихtheir.wav
-them.wav
-имthem.wav
 there.wav
-тамthere.wav
-what.wav
-чтоwhat.wav
-which.wav
-которыйwhich.wav
-who.wav
-ктоwho.wav
+тамthere.wav 
 stopread

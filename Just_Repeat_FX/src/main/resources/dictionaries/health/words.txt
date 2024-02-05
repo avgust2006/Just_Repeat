@@ -40,16 +40,12 @@ flu.wav
 гриппflu.wav
 fracture.wav
 переломfracture.wav
-growth.wav
-ростgrowth.wav
 headache.wav
 головная больheadache.wav
 heal.wav
 исцелятьheal.wav
 health.wav
 здоровьеhealth.wav
-height.wav
-высотаheight.wav
 hurt.wav
 повредитьhurt.wav
 life.wav
@@ -94,4 +90,8 @@ injury.wav
 травмаinjury.wav
 sick.wav
 больнойsick.wav
+increase.wav
+увеличиватьincrease.wav
+decrease.wav
+уменьшатьdecrease.wav
 stopread

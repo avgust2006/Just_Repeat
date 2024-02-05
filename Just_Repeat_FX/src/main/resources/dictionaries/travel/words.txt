@@ -34,14 +34,10 @@ hostel.wav
 общежитиеhostel.wav
 landmark.wav
 ориентирlandmark.wav
-packing.wav
-упаковкаpacking.wav
-rental.wav
-арендаrental.wav
 camp.wav
 лагерьcamp.wav
 route.wav
-маршрутroute.wav
+маршрут (путь)route.wav
 sea.wav
 мореsea.wav
 suitcase.wav
@@ -75,7 +71,7 @@ beach.wav
 boarding.wav
 посадкаboarding.wav
 check out.wav
-выселениеcheck out.wav
+выселитьсяcheck out .wav
 departure.wav
 отправлениеdeparture.wav
 tour.wav
@@ -83,7 +79,7 @@ tour.wav
 vacation.wav
 отпускvacation.wav
 itinerary.wav
-маршрутitinerary.wav
+маршрут (пункты)itinerary.wav
 reservation.wav
 бронированиеreservation.wav
 luggage.wav
@@ -100,4 +96,8 @@ take off.wav
 взлететьtake off.wav
 connection.wav
 соединениеconnection.wav
+package.wav
+упаковкаpackage.wav
+rent.wav
+арендоватьrent.wav
 stopread

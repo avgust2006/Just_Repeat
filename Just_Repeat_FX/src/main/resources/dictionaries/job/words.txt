@@ -88,4 +88,6 @@ application.wav
 заявлениеapplication.wav
 fire.wav
 увольнятьfire.wav
+boss.wav
+руководительboss.wav
 stopread

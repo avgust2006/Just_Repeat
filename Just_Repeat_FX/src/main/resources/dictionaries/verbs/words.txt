@@ -22,8 +22,8 @@ replace.wav
 заменятьreplace.wav
 go.wav
 идтиgo.wav
-eat.wav
-кушатьeat.wav
+1eat.wav
+кушать1eat.wav
 cheat.wav
 обманыватьcheat.wav
 fly.wav
@@ -95,7 +95,13 @@ manage.wav
 learn.wav
 учитьсяlearn.wav
 walk.wav
-ходитьwalk.wav
+гулятьwalk.wav
 want.wav
 хотетьwant.wav
+run.wav
+бегатьrun.wav
+remain.wav
+оставатьсяremain.wav
+keep.wav
+хранитьkeep.wav
 stopread

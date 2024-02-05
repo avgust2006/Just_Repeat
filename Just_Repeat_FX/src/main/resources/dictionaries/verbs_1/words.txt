@@ -26,8 +26,6 @@ search.wav
 искатьsearch.wav
 1use.wav
 использовать1use.wav
-explore.wav
-исследоватьexplore.wav
 seem.wav
 казатьсяseem.wav
 touch.wav
@@ -46,8 +44,6 @@ explain.wav
 объяснятьexplain.wav
 restrict.wav
 ограничиватьrestrict.wav
-remain.wav
-оставатьсяremain.wav
 stay.wav
 оставатьсяstay.wav
 refuse.wav
@@ -100,4 +96,12 @@ read.wav
 читатьread.wav
 feel.wav
 чувствоватьfeel.wav
+become.wav
+становитьсяbecome.wav
+make.wav
+делатьmake.wav
+do.wav
+делатьdo.wav
+save.wav
+сохранитьsave.wav
 stopread

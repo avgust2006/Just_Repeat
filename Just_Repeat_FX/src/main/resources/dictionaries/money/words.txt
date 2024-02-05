@@ -5,7 +5,7 @@ bankrupt.wav
 bargain.wav
 сделкаbargain.wav
 bill.wav
-счетbill.wav
+счет (покупка)bill.wav
 borrow.wav
 заниматьborrow.wav
 buy.wav
@@ -54,8 +54,6 @@ surplus.wav
 излишекsurplus.wav
 tax.wav
 налогtax.wav
-trade.wav
-торговляtrade.wav
 wallet.wav
 бумажникwallet.wav
 waste.wav
@@ -79,9 +77,15 @@ lend.wav
 loan.wav
 заемloan.wav
 estate.wav
-имуществоestate.wav
+имениеestate.wav
 afford.wav
 иметь возможностьafford.wav
+property.wav
+собственностьproperty.wav
 reserve.wav
-бронироватьreserve.wav
+резервироватьreserve.wav
+trade.wav
+торговатьtrade.wav
+account.wav
+счет (банк)account.wav
 stopread

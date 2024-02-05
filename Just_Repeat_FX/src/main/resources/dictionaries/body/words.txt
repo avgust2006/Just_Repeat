@@ -25,7 +25,7 @@ palm.wav
 shoulder.wav
 плечоshoulder.wav
 thumb.wav
-большой палецthumb.wav
+большой палец рукиthumb.wav
 blood.wav
 кровьblood.wav
 brain.wav
@@ -83,6 +83,6 @@ sight.wav
 spine.wav
 позвоночникspine.wav
 toe.wav
-носок ногиtoe.wav
+палец на ногеtoe.wav
 treat.wav
 лечитьtreat.wav

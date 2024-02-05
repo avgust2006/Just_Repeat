@@ -70,4 +70,16 @@ math.wav
 математикаmath.wav
 teacher.wav
 учительteacher.wav
+prepare.wav
+готовитьсяprepare.wav
+dormitory.wav
+общежитиеdormitory.wav
+pupil.wav
+ученикpupil.wav
+guide.wav
+руководствоguide.wav
+answer.wav
+отвечатьanswer.wav
+task.wav
+задачаtask.wav
 stopread
