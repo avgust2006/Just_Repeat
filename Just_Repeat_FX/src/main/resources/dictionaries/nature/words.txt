@@ -92,4 +92,8 @@ wind.wav
 ветерwind.wav
 park.wav
 паркpark.wav
+sea.wav
+мореsea.wav
+river.wav
+рекаriver.wav
 stopread

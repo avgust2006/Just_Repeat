@@ -38,8 +38,6 @@ camp.wav
 лагерьcamp.wav
 route.wav
 маршрут (путь)route.wav
-sea.wav
-мореsea.wav
 suitcase.wav
 чемоданsuitcase.wav
 train.wav

@@ -40,8 +40,6 @@ payment.wav
 оплатаpayment.wav
 profit.wav
 выгодаprofit.wav
-purse.wav
-кошелекpurse.wav
 receipt.wav
 квитанцияreceipt.wav
 rich.wav
@@ -55,7 +53,7 @@ surplus.wav
 tax.wav
 налогtax.wav
 wallet.wav
-бумажникwallet.wav
+кошелекwallet.wav
 waste.wav
 напрасно тратитьwaste.wav
 wealth.wav

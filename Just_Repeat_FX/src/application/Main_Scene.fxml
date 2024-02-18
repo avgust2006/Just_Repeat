@@ -34,7 +34,7 @@
             </DropShadow>
          </effect>
       </Button>
-      <Pane fx:id="Verbs_Btn_Pane" layoutX="42.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Verbs_Btn_Pane" layoutX="79.0" layoutY="57.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
       		<Button fx:id="verbs" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionDict_1" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -51,7 +51,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="18.0" layoutY="48.0" text="VERBS" textFill="#116a7b" />
+            <Label layoutX="18.0" layoutY="39.0" text="VERBS" textFill="#116a7b" />
          </children>
       </Pane>
 		<Label fx:id="Word" alignment="TOP_CENTER" layoutX="14.0" layoutY="160.0" prefHeight="90.0" prefWidth="309.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">
@@ -105,7 +105,7 @@
             </DropShadow>
          </effect>
       </Button>
-      <Pane fx:id="Verbs_Btn_Pane1" layoutX="114.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Verbs_Btn_Pane1" layoutX="201.0" layoutY="57.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="verbs_1" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionVerbs_1" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -122,7 +122,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="48.0" text="VERBS+" textFill="#116a7b" />
+            <Label contentDisplay="CENTER" layoutX="14.0" layoutY="39.0" text="VERBS+" textFill="#116a7b" />
          </children>
       </Pane>
       <Button fx:id="Repeat_2" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="210.0" mnemonicParsing="false" onAction="#actionRepeat_1" prefHeight="30.0" prefWidth="31.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY" visible="false">
@@ -137,7 +137,7 @@
             <FontIcon iconColor="#116a7b" iconLiteral="fa-volume-up" iconSize="18" />
          </graphic>
       </Button>
-      <Pane fx:id="Travel_Btn_Pane" layoutX="184.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Travel_Btn_Pane" layoutX="201.0" layoutY="232.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="travel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionTravel" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -154,10 +154,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="15.0" layoutY="48.0" text="TRAVEL" textFill="#116a7b" />
+            <Label layoutX="15.0" layoutY="39.0" text="TRAVEL" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="House_Btn_Pane" layoutX="254.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="House_Btn_Pane" layoutX="310.0" layoutY="232.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="house" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionHouse" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -174,7 +174,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="16.0" layoutY="48.0" text="HOUSE" textFill="#116a7b" />
+            <Label layoutX="16.0" layoutY="39.0" text="HOUSE" textFill="#116a7b" />
          </children>
       </Pane>
       <Button fx:id="Return" alignment="CENTER" layoutX="89.0" layoutY="392.0" mnemonicParsing="false" onAction="#actionReturn" prefHeight="30.0" prefWidth="95.0" stylesheets="@application.css" text="DICTIONARIES" visible="false">
@@ -215,7 +215,7 @@
                </color>
             </DropShadow>
          </effect></Button>
-      <Pane fx:id="Clothes_Btn_Pane" layoutX="323.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Clothes_Btn_Pane" layoutX="79.0" layoutY="314.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="clothes" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionClothes" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -232,7 +232,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="10.0" layoutY="48.0" text="CLOTHES" textFill="#116a7b" />
+            <Label layoutX="10.0" layoutY="39.0" text="CLOTHES" textFill="#116a7b" />
          </children>
       </Pane>
       <Text fx:id="Explanation" fill="#116a7b" layoutX="54.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" ENG.  For every foreign words: listen word, watch how  it is written, repeat the word in loud.&#10; &#10; RUS.  Для каждого иностранного слова: прослушайте слово, посмотрите как оно &#10; пишется,  повторите слово вслух. " wrappingWidth="576.0">
@@ -240,7 +240,7 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Pane fx:id="Food_Btn_Pane" layoutX="393.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Food_Btn_Pane" layoutX="421.0" layoutY="232.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="food" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionFood" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -257,10 +257,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="19.0" layoutY="48.0" text="FOOD" textFill="#116a7b" />
+            <Label layoutX="19.0" layoutY="39.0" text="FOOD" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Nature_Btn_Pane" layoutX="463.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Nature_Btn_Pane" layoutX="310.0" layoutY="314.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="nature" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionNature" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -277,10 +277,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="13.0" layoutY="48.0" text="NATURE" textFill="#116a7b" />
+            <Label layoutX="13.0" layoutY="39.0" text="NATURE" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Transport_Btn_Pane" layoutX="533.0" layoutY="58.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Transport_Btn_Pane" layoutX="539.0" layoutY="232.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="transport" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionTransport" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -297,10 +297,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="2.0" layoutY="48.0" text="TRANSPORT" textFill="#116a7b" />
+            <Label layoutX="2.0" layoutY="39.0" text="TRANSPORT" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Body_Btn_Pane" layoutX="42.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Body_Btn_Pane" layoutX="79.0" layoutY="150.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="body" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionBody" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -317,30 +317,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="20.0" layoutY="48.0" text="BODY" textFill="#116a7b" />
+            <Label layoutX="20.0" layoutY="39.0" text="BODY" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Imp_Btn_Pane" layoutX="114.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
-         <children>
-            <Button fx:id="important" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionImportant" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <graphic>
-                  <FontIcon iconColor="#116a7b" iconSize="15" text="JR" />
-               </graphic>
-               <effect>
-                  <DropShadow height="5.0" radius="2.0" width="5.0">
-                     <color>
-                        <Color red="0.06666667014360428" green="0.4156862795352936" blue="0.48235294222831726" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Button>
-            <Label layoutX="2.0" layoutY="48.0" text="IMPORTANT" textFill="#116a7b" />
-         </children>
-      </Pane>
-      <Pane fx:id="Education_Btn_Pane" layoutX="184.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Education_Btn_Pane" layoutX="201.0" layoutY="150.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="education" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionEducation" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -357,10 +337,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="2.0" layoutY="48.0" text="EDUCATION" textFill="#116a7b" />
+            <Label layoutX="2.0" layoutY="39.0" text="EDUCATION" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Job_Btn_Pane" layoutX="254.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Job_Btn_Pane" layoutX="310.0" layoutY="150.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="job" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionJob" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -377,10 +357,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="25.0" layoutY="48.0" text="JOB" textFill="#116a7b" />
+            <Label layoutX="25.0" layoutY="39.0" text="JOB" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Sport_Btn_Pane" layoutX="323.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Sport_Btn_Pane" layoutX="421.0" layoutY="150.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="sport" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionSport" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -397,10 +377,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="17.0" layoutY="48.0" text="SPORT" textFill="#116a7b" />
+            <Label layoutX="17.0" layoutY="39.0" text="SPORT" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Family_Btn_Pane" layoutX="393.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Family_Btn_Pane" layoutX="539.0" layoutY="150.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="family" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionFamily" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -417,10 +397,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="17.0" layoutY="48.0" text="FAMILY" textFill="#116a7b" />
+            <Label layoutX="15.0" layoutY="39.0" text="FAMILY" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Health_Btn_Pane" layoutX="463.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Health_Btn_Pane" layoutX="539.0" layoutY="314.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="health" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionHealth" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -437,10 +417,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="14.0" layoutY="48.0" text="HEALTH" textFill="#116a7b" />
+            <Label layoutX="14.0" layoutY="39.0" text="HEALTH" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Date_Btn_Pane" layoutX="539.0" layoutY="135.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Date_Btn_Pane" layoutX="421.0" layoutY="314.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="date" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionDate" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -461,7 +441,7 @@
             <Label layoutX="8.0" layoutY="54.0" text="NUMBERS" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Money_Btn_Pane" layoutX="54.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Money_Btn_Pane" layoutX="79.0" layoutY="232.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="money" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionMoney" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -478,10 +458,10 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="14.0" layoutY="48.0" text="MONEY" textFill="#116a7b" />
+            <Label layoutX="14.0" layoutY="39.0" text="MONEY" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Pronoun_Btn_Pane" layoutX="137.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Pronoun_Btn_Pane" layoutX="539.0" layoutY="57.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="pronoun" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionPronoun" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -503,7 +483,7 @@
             <Label layoutX="-11.0" layoutY="61.0" text="CONJUNCTIONS" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Preposition_Btn_Pane" layoutX="219.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Preposition_Btn_Pane" layoutX="421.0" layoutY="57.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="preposition" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionPreposition" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -525,7 +505,7 @@
             <Label layoutX="9.0" layoutY="61.0" text="ADVERBS" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Common_Btn_Pane" layoutX="324.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Common_Btn_Pane" layoutX="201.0" layoutY="314.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="common" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionCommon" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -546,7 +526,7 @@
             <Label layoutX="10.0" layoutY="56.0" text="PHRASES" textFill="#116a7b" />
          </children>
       </Pane>
-      <Pane fx:id="Adjective_Btn_Pane" layoutX="498.0" layoutY="240.0" prefHeight="70.0" prefWidth="70.0" visible="false">
+      <Pane fx:id="Adjective_Btn_Pane" layoutX="310.0" layoutY="57.0" prefHeight="70.0" prefWidth="70.0" visible="false">
          <children>
             <Button fx:id="adjective" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="5.0" mnemonicParsing="false" onAction="#actionAdjective" prefHeight="30.0" prefWidth="32.0" stylesheets="@application.css" text=" " textAlignment="JUSTIFY">
                <font>
@@ -563,7 +543,7 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Label layoutX="3.0" layoutY="48.0" text="ADJECTIVES" textFill="#116a7b" />
+            <Label layoutX="3.0" layoutY="39.0" text="ADJECTIVES" textFill="#116a7b" />
          </children>
       </Pane>
 	</children>

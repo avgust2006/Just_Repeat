@@ -1,21 +1,13 @@
-anything else.wav
-что-нибудь ещеanything else.wav
 be careful.wav
 будь остороженbe careful.wav
 come here.wav
 идите сюдаcome here.wav
 don't worry.wav
 не волнуйтесьdon't worry.wav
-have you been.wav
-ты былhave you been.wav
-how far.wav
-как далекоhow far.wav
-how much.wav
-сколькоhow much.wav
 I am going to.wav
 Я собираюсьI am going to.wav
 I would like.wav
-Я хотел быI would like.wav
+Я бы хотелI would like.wav
 just a little.wav
 немногоjust a little.wav
 long time ago.wav
@@ -50,12 +42,6 @@ turn around.wav
 повернутьсяturn around.wav
 very busy.wav
 очень занятvery busy.wav
-what time.wav
-сколько времениwhat time.wav
-where are you from.wav
-откуда тыwhere are you from.wav
-why not.wav
-почему нетwhy not.wav
 let me know.wav
 дайте мне знатьlet me know.wav
 never seen.wav
@@ -64,5 +50,6 @@ hand over.wav
 передатьhand over.wav
 give up.wav
 сдаватьсяgive up.wav
-feel good.wav
-хорошо себя чувствоватьfeel good.wav
+look for.wav
+искатьlook for.wav
+stopread

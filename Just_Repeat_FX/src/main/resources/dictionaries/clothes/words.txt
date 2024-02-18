@@ -73,5 +73,7 @@ pocket.wav
 socks.wav
 носкиsocks.wav
 wallet.wav
-кошелекwallet.wav
+бумажникwallet.wav
+purse.wav
+кошелекpurse.wav
 stopread

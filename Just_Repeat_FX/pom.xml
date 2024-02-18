@@ -19,8 +19,8 @@
      
     </resources>
     <plugins>
-		 
-	 	 <!--
+		   
+	 	  
 		 <plugin>	  
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -30,14 +30,14 @@
 			
           <archive>
             <manifest>
-              <addClasspath>true</addClasspath>
-              <mainClass>.${basedir}.src.application.Start_Window.java</mainClass>
+             <addClasspath>true</addClasspath> 
+              <mainClass>application.Start_Window</mainClass>
             </manifest>
           </archive>
         </configuration>
         
       </plugin>
-        -->
+          
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
@@ -77,13 +77,13 @@
       	<artifactId>javafx-maven-plugin</artifactId>
       	<version>0.0.8</version>
       	<configuration>	
-			  	  
+			 
 		  
             <compress>2</compress>
             <noHeaderFiles>true</noHeaderFiles>
              <stripDebug>true</stripDebug>
               <noManPages>true</noManPages>
-             
+              
               <launcher>start</launcher> 
            
             <mainClass>application.Start_Window</mainClass>
@@ -126,10 +126,11 @@
            <runtimeImage>target/JustRepeat</runtimeImage> 
             <type>MSI</type>
             <appVersion>1.0.0</appVersion>
-            <icon></icon>
+            <icon>C:\Users\Admin\Documents\Demidov\photo\photos\12.jpg</icon>
            
             <winShortcut>true</winShortcut>
             <winDirChooser>true</winDirChooser>
+            
              		 
 	</configuration>
         </plugin>	  

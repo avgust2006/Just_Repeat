@@ -39,7 +39,6 @@ public class MainBtn_Contr {
 	             Nature_Btn_Pane,   //  pane for activate "NATURE" button dictionary
 	             Transport_Btn_Pane, //  pane for activate "TRANSPORT" button dictionary
 	             Body_Btn_Pane, //  pane for activate "BODY" button dictionary
-	             Imp_Btn_Pane,  //  pane for activate "IMPORTANT" button dictionary
 	             Education_Btn_Pane,  //  pane for activate "EDUCATION" button dictionary
 	             Sport_Btn_Pane,  //  pane for activate "SPORT" button dictionary
 	             Family_Btn_Pane,  //  pane for activate "FAMILY" button dictionary
@@ -67,7 +66,7 @@ public class MainBtn_Contr {
 	               nature,     // "NATURE"
 	               transport,  // "TRANSPORT"
 	               body,      // "BODY"
-	               important, // "IMPORTANT"
+	          //     important, // "IMPORTANT"
 	               education, // "EDUCATION"
 	               sport,     // "SPORT"
 	               job,       // "JOB"
@@ -331,21 +330,6 @@ public class MainBtn_Contr {
 	  }
 	  
 	  /*
-	   * This method handles of IMPORTANT button pressing event		
-	  */ 
-	  
-	  public void actionImportant(ActionEvent e) {
-		  
-		  inputstream.dict_Downloads_Stream("/main/resources/dictionaries/important/");
-		  important.setOpacity(0);
-		  inputstream.setOnePaneVisible(Imp_Btn_Pane, panes);
-		  takePaneInitPosition(Imp_Btn_Pane); 
-		  setPaneInCentral(Imp_Btn_Pane);
-		  Main_Button.setText("START");
-		  inputstream.fadeChange(Main_Button, important, Imp_Btn_Pane) ;
-		  Main_Button.setVisible(true); 
-		  
-	  }
 	  
 	  /*
 	   * This method handles of EDUCATION button pressing event		
@@ -718,7 +702,6 @@ public class MainBtn_Contr {
 		  panes.add(Nature_Btn_Pane);
 		  panes.add(Transport_Btn_Pane);
 		  panes.add(Body_Btn_Pane);
-		  panes.add(Imp_Btn_Pane);
 		  panes.add(Education_Btn_Pane);
 		  panes.add(Job_Btn_Pane);
 		  panes.add(Sport_Btn_Pane);
