@@ -78,7 +78,7 @@
             </DropShadow>
          </effect>
          <graphic>
-            <FontIcon iconColor="#116a7b" iconLiteral="fa-volume-up" iconSize="18" />
+           <FontIcon iconColor="#116a7b" iconLiteral="fa-volume-up" iconSize="18" />
          </graphic>
       </Button>
 		<Label fx:id="Translation" alignment="TOP_CENTER" layoutX="361.0" layoutY="160.0" prefHeight="90.0" prefWidth="309.0" style="-fx-background-color: #ECE5C7; -fx-background-radius: 4,4,4,4;" text=" " textAlignment="CENTER" textFill="#116a7b" visible="false">

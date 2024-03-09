@@ -20,8 +20,8 @@ public class Start_Window extends Application {
 		  	scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		 	primaryStage.setScene(scene);
 		// 	primaryStage.setTitle("JustRepeat.Dictionary");
-		// 	primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
-		  	primaryStage.getIcons().add(new Image ("https://www.nicepng.com/png/full/417-4170762_streamvpg-world-vector-logo-png.png"));
+		  	primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/main/resources/dictionaries/icon/logo.jpg")));
+		//  primaryStage.getIcons().add(new Image ("https://www.nicepng.com/png/full/417-4170762_streamvpg-world-vector-logo-png.png"));
 		    primaryStage.initStyle(StageStyle.TRANSPARENT);
 		  	primaryStage.setResizable(false);
 			primaryStage.show();
